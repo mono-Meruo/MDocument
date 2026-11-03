@@ -1,40 +1,31 @@
 ---
-title: ⚙️M. Avatar Setting
-parent: Menno
-has_children: true
+title: M. Avatar Setting
 nav_order: 5
-permalink: /menno/mas-settings/
-lang: en
 ---
 
-# Menno - M. Avatar Setting Configuration
+# M. Avatar Setting Settings
 
-M. Avatar Setting allows you to easily adjust various settings for the Menno avatar. This page explains the Menno-specific configuration options.
+M. Avatar Setting allows you to update Menno's face, hair, and item settings at once. You can navigate to each individual settings page from here.
 
-![M. Avatar Setting UI]({{ site.baseurl }}/assets/images/mas_ui.png)
+![M. Avatar Setting UI](/assets/images/mas_ui.png)
 
-## What is M. Avatar Setting?
+## Settings
 
-M. Avatar Setting is a tool for easy customization of the Menno avatar. You can adjust facial expressions, hair color, costumes, and more using an intuitive UI.
+| Setting | Description |
+|---|---|
+| [Face Settings](/en/menno/mas-settings/face/) | Adjust expressions and blend shapes |
+| [Hair Settings](/en/menno/mas-settings/hair/) | Adjust hair color and shape |
+| [Item Settings](/en/menno/mas-settings/items/) | Configure clothing and accessories |
 
-## Configuration Categories
+## Usage
 
-The following configuration categories are available in M. Avatar Setting for the Menno avatar:
+1. Place Menno in the scene.
+2. Open `Window > M Avatar Setting` from the Unity menu (see [M. Avatar Setting](/en/avatar-setting/) for details).
+3. Expand the desired settings category and adjust the values.
 
-* [**Face Settings**]({{ site.baseurl }}/menno/mas-settings/face/) - Adjustment of expressions and blend shapes
-* [**Hair Settings**]({{ site.baseurl }}/menno/mas-settings/hair/) - Adjustment of hair color and shape
-* [**Item Settings**]({{ site.baseurl }}/menno/mas-settings/items/) - Configuration of costumes and accessories
+Settings are saved automatically and persist across sessions.
 
-For details on each configuration category, click on the respective links.
-
-## How to Use
-
-1. Place the Menno avatar in a scene
-2. Open the M. Avatar Setting window ([Details on how to open it]({{ site.baseurl }}/avatar-setting/))
-3. Expand each configuration category as needed and adjust the parameters
-4. Settings are automatically saved and will be applied in the future
-
-## Notes
-
-* Settings are specific to the Menno avatar and will not apply to other avatars
-* There may be conflicts with M. Avatar Setting for Emmelie, so it is recommended to import in a new project. 
+::: warning Note
+- This setting is exclusive to Menno. It will not apply to other avatars.
+- We recommend importing it into a fresh project, as it may conflict with Emmelie's M. Avatar Setting.
+:::

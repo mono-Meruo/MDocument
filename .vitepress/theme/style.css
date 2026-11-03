@@ -1,0 +1,235 @@
+/*
+ * M. Document design rules
+ *
+ * Space   4px base. Vertical rhythm only uses 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48.
+ * Type    28 page title · 20 section · 16 subsection · 15 body · 13 meta · 12 label.
+ *         Hierarchy comes from size, weight and contrast (text-1 / 2 / 3), not from colour.
+ * Accent  Links and "you are here" only.
+ * Radius  4px, one value everywhere.
+ * Lines   1px dividers separate sections; no shadows, glows or gradients.
+ */
+
+:root {
+  --radius: 4px;
+  --vp-font-family-base: 'Inter', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic UI', Meiryo,
+    ui-sans-serif, system-ui, sans-serif;
+
+  /* light (available from the theme switch) */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #ffffff;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f5f5f6;
+  --vp-c-divider: #e7e7ea;
+  --vp-c-border: #d9d9de;
+  --vp-c-gutter: #e7e7ea;
+  --vp-c-text-1: #18181b;
+  --vp-c-text-2: #55555d;
+  --vp-c-text-3: #6e6e76;
+  --vp-c-brand-1: #2f5fd0;
+  --vp-c-brand-2: #3d6ddb;
+  --vp-c-brand-3: #2f5fd0;
+  --vp-c-brand-soft: rgb(47 95 208 / 0.1);
+  --vp-sidebar-bg-color: var(--vp-c-bg);
+  --vp-code-block-bg: var(--vp-c-bg-soft);
+  --vp-code-color: var(--vp-c-text-1); /* accent is for links only */
+}
+:lang(ko) {
+  --vp-font-family-base: 'Inter', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', ui-sans-serif, system-ui,
+    sans-serif;
+}
+:lang(zh) {
+  --vp-font-family-base: 'Inter', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark {
+  --vp-c-bg: #101012;
+  --vp-c-bg-alt: #101012;
+  --vp-c-bg-elv: #17171a;
+  --vp-c-bg-soft: #17171a;
+  --vp-c-divider: #232327;
+  --vp-c-border: #303036;
+  --vp-c-gutter: #232327;
+  --vp-c-text-1: #ececee;
+  --vp-c-text-2: #a1a1a9;
+  --vp-c-text-3: #7c7c84;
+  --vp-c-brand-1: #8fb0ff;
+  --vp-c-brand-2: #a8c1ff;
+  --vp-c-brand-3: #5a83e3;
+  --vp-c-brand-soft: rgb(143 176 255 / 0.1);
+}
+
+/* ---- Chrome: nav, sidebar, search, pager ---- */
+
+.VPSidebar {
+  border-right: 1px solid var(--vp-c-divider);
+}
+.VPSidebar .VPSidebarItem .item .text {
+  font-weight: 400;
+}
+.VPSidebar .VPSidebarItem.level-0 > .item .text {
+  font-size: 13px;
+  font-weight: 600;
+}
+.VPNavBarSearch .DocSearch-Button,
+.VPLocalSearchBox .shell {
+  border-radius: var(--radius);
+}
+
+.VPDocFooter .prev-next .pager-link {
+  border: 0;
+  border-top: 1px solid var(--vp-c-divider);
+  border-radius: 0;
+  padding: 12px 0 0;
+}
+.VPDocFooter .prev-next .pager-link:hover {
+  border-color: var(--vp-c-text-3);
+}
+
+/* ---- Document body ---- */
+
+.vp-doc {
+  font-size: 15px;
+}
+.vp-doc :is(h1, h2, h3, h4) {
+  letter-spacing: 0;
+  font-weight: 600;
+  font-feature-settings: 'palt';
+}
+.vp-doc h1 {
+  font-size: 28px;
+  line-height: 36px;
+}
+.vp-doc h2 {
+  margin: 48px 0 12px;
+  padding-top: 24px;
+  font-size: 20px;
+  line-height: 28px;
+}
+.vp-doc h3 {
+  margin: 32px 0 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+.vp-doc h4 {
+  margin: 24px 0 0;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.8;
+}
+.vp-doc li + li {
+  margin-top: 4px;
+}
+
+.vp-doc a {
+  font-weight: inherit;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  transition: text-decoration-color 0.12s;
+}
+.vp-doc a:hover {
+  color: var(--vp-c-brand-1);
+  text-decoration-color: currentColor;
+}
+
+/* Tables: rules only, no zebra, no boxes. Full measure on wide screens so columns line up page to page. */
+@media (min-width: 640px) {
+  .vp-doc table {
+    display: table;
+    width: 100%;
+  }
+}
+.vp-doc tr,
+.vp-doc tr:nth-child(2n) {
+  background: none;
+  border: 0;
+}
+.vp-doc th,
+.vp-doc td {
+  border: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 8px 24px 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  vertical-align: top;
+}
+.vp-doc th {
+  background: none;
+  border-bottom-color: var(--vp-c-border);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--vp-c-text-2);
+}
+
+/* Notes: a rule on the left and a small label, like a margin note */
+.vp-doc .custom-block {
+  border: 0;
+  border-left: 2px solid var(--vp-c-border);
+  border-radius: 0;
+  background: none;
+  margin: 24px 0;
+  padding: 0 0 0 16px;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+}
+.vp-doc .custom-block.tip {
+  border-left-color: var(--vp-c-brand-1);
+}
+.vp-doc .custom-block.warning {
+  border-left-color: var(--vp-c-warning-1);
+}
+.vp-doc .custom-block.danger {
+  border-left-color: var(--vp-c-danger-1);
+}
+.vp-doc .custom-block .custom-block-title {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-1);
+}
+.vp-doc .custom-block p {
+  margin: 4px 0;
+  line-height: 1.7;
+}
+
+.vp-doc div[class*='language-'] {
+  border-radius: var(--radius);
+}
+
+/* Screenshots and videos sit on a hairline so they read as figures, not decoration */
+.vp-doc img {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--radius);
+}
+.vp-doc img.zoomable {
+  cursor: zoom-in;
+}
+.vp-doc iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+}
+
+.img-zoom {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 4vh 4vw;
+  background: rgb(0 0 0 / 0.85);
+  cursor: zoom-out;
+}
+.img-zoom img {
+  max-width: 100%;
+  max-height: 92vh;
+  border-radius: var(--radius);
+}

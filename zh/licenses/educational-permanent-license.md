@@ -1,12 +1,9 @@
 ---
 title: 非商业项目许可证
-parent: M. 化身模型许可协议
 nav_order: 2
-permalink: /licenses/educational-permanent-license/
-lang: zh
 ---
 
-非商业项目许可证服务条款
+# 非商业项目许可证服务条款
 
 本条款规定了由 M.（以下简称"权利人"）提供的3D模型（以下简称"本模型"）在非商业项目中使用的条件。用户购买本模型即视为同意本条款。
 

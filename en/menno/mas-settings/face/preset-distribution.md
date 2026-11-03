@@ -1,53 +1,39 @@
 ---
-title: 🎭Face Shape Key Preset Distribution Guide
-parent: ⚙️Face Settings
-grand_parent: ⚙️M. Avatar Setting
-great_grand_parent: Menno
+title: Face Shape Key Preset Distribution Guide
 nav_order: 4
-permalink: /menno/mas-settings/face/preset-distribution/
-lang: en
 ---
 
 # Face Shape Key Preset Distribution Guide
 
-These are the distribution rules for face presets created with M. Avatar Setting.
+Rules to follow when selling or freely distributing face presets created in M. Avatar Setting. For preset creation instructions, see [Quick Start](/en/menno/mas-settings/face/preset-quickstart/).
 
-## Basic Distribution Rules
+::: warning Note
+The content of this guide is for reference. Always check the latest [Menno Avatar Terms of Use](https://drive.google.com/file/d/1K8AcjlYHFfJ4cFcJvBvvwei79qwlbqFx/view) before distributing.
+:::
 
-When distributing (selling or giving away for free) presets, please follow these rules.
+## Mandatory Rules
 
-1.  **What You Can Distribute**
-    Only the **.asset files** located in `Assets/emudotto/Menno/Resources/Face_Presets/`.
+1. **Only `.asset` files may be distributed.** You may only distribute `.asset` files located in `Assets/emudotto/Menno/Resources/Face_Presets/`.
+2. **No data other than presets may be included.** Distributing any data other than preset files, such as Menno Avatar model data (.fbx) or textures, is strictly prohibited.
+3. **Selling is allowed.** You may freely distribute and sell the presets you create, for commercial or non-commercial purposes.
+4. **Require buyers to own the Menno Avatar separately.** You must include the following text in your distribution page's description or summary:
 
-2.  **What You Cannot Distribute**
-    Distributing any data other than the preset file, such as the Menno avatar's model data (.fbx) or textures, is **strictly prohibited**.
+   ```text
+   This data is a preset dedicated to #Menno3D.
+   The Menno Avatar sold separately is required for use.
+   ```
 
-3.  **Selling is OK**
-    You can freely distribute and sell the presets you create, for both commercial and non-commercial purposes. It is recommended to distribute them in UnityPackage format for user convenience.
+5. **Use at your own risk.** Using distributed presets is at the user's discretion. The creator and emudotto assume no responsibility for any issues arising from the use of these presets.
 
-4.  **Entering Preset Information (Recommended)**
-    To improve convenience for users, it is recommended to set the following information for the presets you distribute.
-    - **Name**: A name that describes the content of the preset (e.g., `Menno_Face_Preset_Calm`)
-    - **Description**: Features or notes about the preset
-    - **Author**: Your name or brand name
-    ![assets]({{ site.baseurl }}/assets/images/preset_assets.png)
+## Recommended (Optional)
 
-5.  **Mandatory Requirement for Users**
-    When selling or distributing presets, you must require that **the user has already purchased the main Menno avatar body**. Please be sure to include the following information in the description of your distribution page.
+- Distributing in UnityPackage format makes it easier for users to install.
+- For user convenience, we recommend setting the following information in your presets:
 
-    > **[Required Information]**
-    > This data is a preset exclusively for #Menno3D.
-    > The main Menno avatar body, sold separately, is required for use.
+| Field | Content |
+|---|---|
+| Name | A descriptive name indicating the preset's content (e.g., `Menno_Face_Preset_Calm`) |
+| Description | Preset features and notes |
+| Author | Your name or brand name |
 
-6.  **Use at Your Own Risk**
-    The use of distributed presets is at your own risk. The creator and emudotto are not responsible for any problems that may arise from the use of the presets.
-
-
-## Related Links
-
-- [🎭Face Blend Shape Preset (Quick Start)]({{ site.baseurl }}/menno/mas-settings/face/preset-quickstart/)
-- [Menno Avatar Terms of Use](https://drive.google.com/file/d/1K8AcjlYHFfJ4cFcJvBvvwei79qwlbqFx/view)
-
----
-
-**Note**: The contents of this guide are for reference only. Always check the latest terms of use before distribution. 
+![assets](/assets/images/preset_assets.png)

@@ -1,65 +1,56 @@
 ---
-title: ⚙️M. Avatar Setting
+title: M. Avatar Setting
+description: Unity エディタ拡張。アバターの顔・髪・アイテムの調整と自動セットアップ。
 nav_order: 3
-has_children: true
-permalink: /avatar-setting/
 ---
 
 # M. Avatar Setting
 
-M. Avatar Settingは、Unity用のエディタ拡張ツールで、VRChat用のアバター（Menno）の設定を簡単に行うことができます。
+M. Avatar Setting は、VRChat アバター Menno の設定を Unity 上で行うエディタ拡張です。起動方法と自動セットアップの使い方を確認できます。
 
-## 前提条件
+## 必要なツール
 
-M. Avatar Settingは以下のツールを前提としています：
+先に次のツールをインストールしてください。
+
 - [Modular Avatar](https://github.com/bdunderscore/modular-avatar/releases)
-- [Liltoon](https://booth.pm/ja/items/3087170)
+- [lilToon](https://booth.pm/ja/items/3087170)
 
-これらのツールが事前にインストールされていることを確認してください。
+## 起動する
 
-## M. Avatar Settingの起動方法
+次のどちらかの方法で開きます。
 
-M. Avatar Settingには、以下の2つの方法で起動できます：
+### メニューから開く
 
-### 1. メニューから起動
+1. Unity のメニューから `Window > M Avatar Setting` を選びます。
 
-Unityのメニューから`Window > M Avatar Setting`を選択することで、M. Avatar Settingウィンドウを開くことができます。
+![メニューから起動](/assets/images/mas_01.png)
 
-![メニューから起動]({{ site.baseurl }}/assets/images/mas_01.png)
+### M. Avatar Setup Helper から開く
 
-### 2. M. Avatar Setup Helperから起動
+1. Hierarchy でアバターを選びます。
+2. Inspector の「M. Avatar Setup Helper」コンポーネントにある「M. Avatar Settingを開く」ボタンを押します。
 
-アバターを選択した状態で、Inspector上に表示される「M. Avatar Setup Helper」コンポーネント内の「M. Avatar Settingを開く」ボタンをクリックすることでも起動できます。この方法では、アバターが自動的に選択された状態でウィンドウが開きます。
+アバターが選ばれた状態でウィンドウが開きます。
 
-![Setup Helperから起動]({{ site.baseurl }}/assets/images/mas_02.png)
+![Setup Helperから起動](/assets/images/mas_02.png)
 
-## 自動セットアップ機能
+## アニメーションキーを追加する
 
-M. Avatar Settingには、アバターの設定を自動化するいくつかの機能があります。
+Expression Menu の「ライティング調整」Radial Puppet が使うアニメーションに、アバター内の全マテリアルの明るさの下限（`_LightMinLimit`）を自動で登録します。
 
-### アニメーションキーの追加
+1. M. Avatar Setting ウィンドウを開きます。
+2. アバターを選びます。
+3. 「アニメーションキーを追加」ボタンを押します。
 
-「アニメーションキーを追加」ボタンを使用すると、Expression Menuにある「ライティング調整」Radial Puppetで使用されるアニメーションに、アバターの階層にあるマテリアルのすべての明るさの下限（_LightMinLimit）を自動的に登録できます。
+![アニメーションキー追加](/assets/images/mas_03.png)
 
-![アニメーションキー追加]({{ site.baseurl }}/assets/images/mas_03.png)
+::: warning 注意
+Modular Avatar で階層を変更するコンポーネントには、まだ対応していません（今後対応予定）。
+:::
 
-#### 使用方法
+## 次に読む
 
-1. M. Avatar Settingウィンドウを開きます
-2. アバターを選択します
-3. 「アニメーションキーを追加」ボタンをクリックします
+表示される設定はアバターごとに異なります。
 
-#### 注意点
-
-* 現在の実装では、Modular Avatarで階層を変更するコンポーネントについては対応していません
-* 今後のアップデートで対応予定です
-
-## アバター固有の設定
-
-M. Avatar Settingでは、アバターの種類によって表示される設定が異なります。
-
-* [Mennoの設定]({{ site.baseurl }}/menno/) - Mennoアバター固有の設定
-
-## その他の機能
-
-* [更新履歴]({{ site.baseurl }}/avatar-setting/history/) - M. Avatar Settingとアバターのアップデート情報 
+- [Menno の設定](/menno/)
+- [更新履歴](/avatar-setting/history/)

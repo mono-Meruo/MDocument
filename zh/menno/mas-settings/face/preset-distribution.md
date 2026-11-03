@@ -1,53 +1,39 @@
 ---
-title: 🎭面部造型关键帧预设分发指南
-parent: ⚙️面部设置
-grand_parent: ⚙️M. Avatar Setting
-great_grand_parent: Menno
+title: 面部造型关键帧预设分发指南
 nav_order: 4
-permalink: /menno/mas-settings/face/preset-distribution/
-lang: zh
 ---
 
-# 面部造型关键帧预设分发指南
+# 面部形状键预设发布指南
 
-这是使用 M. Avatar Setting 创建的面部预设的分发规则。
+遵循在 M. Avatar Setting 中创建的预设进行销售或免费分发时需遵守的规则。有关预设制作方法，请参阅 [快速入门](/zh/menno/mas-settings/face/preset-quickstart/)。
 
-## 基本分发规则
+::: warning 注意
+本指南内容为参考信息。分发前请务必查阅最新的 [Menno Avatar 使用条款](https://drive.google.com/file/d/1K8AcjlYHFfJ4cFcJvBvvwei79qwlbqFx/view)。
+:::
 
-在分发（销售或免费提供）预设时，请遵守以下规则。
+## 必须遵守的规则
 
-1.  **可以分发的内容**
-    仅限 `Assets/emudotto/Menno/Resources/Face_Presets/` 目录下的 **.asset 文件**。
+1. **仅可分发 `.asset` 文件。** 只能分发位于 `Assets/emudotto/Menno/Resources/Face_Presets/` 内的 `.asset` 文件。
+2. **不得包含预设以外的数据。** 严格禁止将 Menno Avatar 的模型数据（.fbx）、纹理等非预设文件的数据一并分发。
+3. **允许销售。** 创建的预设可自由进行分发与销售，无论盈利与否。
+4. **必须将以用户已另行购买 Menno Avatar 本体为前提。** 请务必在分发页面的描述栏等处注明以下内容：
 
-2.  **不可分发的内容**
-    **严禁**分发除预设文件之外的任何数据，例如 Menno 虚拟形象的模型数据（.fbx）或纹理。
+   ```text
+   本数据为 #Menno3D 专用预设。
+   使用时需另行购买 Menno Avatar 本体。
+   ```
 
-3.  **可以销售**
-    您创建的预设可以自由分发和销售，无论是商业用途还是非商业用途。建议以 UnityPackage 格式分发，方便用户导入。
+5. **使用需自行承担责任。** 使用分发的预设需自行承担风险。创作者及 emudotto 不对因使用该预设而产生的任何问题承担责任。
 
-4.  **填写预设信息（推荐）**
-    为了方便用户，建议为您分发的预设设置以下信息。
-    - **名称**: 一个能描述预设内容的名字（例如：`Menno_Face_Preset_Calm`）
-    - **描述**: 预设的特点或注意事项
-    - **作者**: 您的名字或品牌名称
-    ![assets]({{ site.baseurl }}/assets/images/preset_assets.png)
+## 建议（可选）
 
-5.  **对用户的强制性要求**
-    在销售或分发预设时，您必须要求**用户已经购买了 Menno 虚拟形象本体**。请务必在您的分发页面的描述中包含以下信息。
+- 以 UnityPackage 格式分发可方便用户使用。
+- 为方便用户使用，建议在预设中设置以下信息：
 
-    > **【必须注明】**
-    > 此数据是 #Menno3D 的专用预设。
-    > 使用时需要另外购买的 Menno 虚拟形象本体。
+| 项目 | 内容 |
+|---|---|
+| 名称 | 能够体现预设内容的名称（例：`Menno_Face_Preset_Calm`） |
+| 说明 | 预设的特点或注意事项等 |
+| 作者 | 您的名字或品牌名称 |
 
-6.  **使用风险自负**
-    使用分发的预设的风险由您自己承担。创作者和 emudotto 对因使用预设而可能出现的任何问题概不负责。
-
-
-## 相关链接
-
-- [🎭面部混合变形预设（快速入门）]({{ site.baseurl }}/menno/mas-settings/face/preset-quickstart/)
-- [Menno 虚拟形象使用条款](https://drive.google.com/file/d/1K8AcjlYHFfJ4cFcJvBvvwei79qwlbqFx/view)
-
----
-
-**注意**：本指南内容仅供参考。分发前请务必确认最新的使用条款。 
+![assets](/assets/images/preset_assets.png)

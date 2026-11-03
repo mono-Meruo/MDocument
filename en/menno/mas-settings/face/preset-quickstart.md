@@ -1,63 +1,33 @@
 ---
-title: 🎭Face Blend Shape Preset (Quick Start)
-parent: ⚙️Face Settings
-grand_parent: ⚙️M. Avatar Setting
-great_grand_parent: Menno
+title: Face Blend Shape Preset (Quick Start)
 nav_order: 2
-permalink: /menno/mas-settings/face/preset-quickstart/
-lang: en
-
 ---
 
-# Face Shape Key Preset Feature - Quick Start
+# Face Blend Shape Presets (Quick Start)
 
-With M. Avatar Setting's blend shape preset feature, you can save your favorite blend shapes and easily recall them anytime.
+Save your adjusted face shape as a preset and call it up anytime with the slider. For details on each button and where presets are stored, see the [Detailed Guide](/en/menno/mas-settings/face/preset-guide/).
 
-![Preset Feature UI]({{ site.baseurl }}/assets/images/preset_ui.png)
+![Preset Feature UI](/assets/images/preset_ui.png)
 
-## How to Save Presets
+## Save a Preset
 
-### 1. Adjust Blend Shapes
-First, create your favorite blend shapes in the face settings.
+1. Adjust the blend shape to your desired face shape in Face Settings.
+2. Enter a preset name in the "Shape Key Preset" section. The default name is something like `Menno_Face_Preset_01`. You can change it to a clear name like "Child", "Adult", or "Baby Face".
+3. Click the "Save" button.
 
-### 2. Enter Preset Name
-In the "Shape Key Preset" section, enter a preset name.
-- By default, a name like `Menno_Face_Preset_01` is automatically entered
-- You can change it to a more descriptive name (e.g., "Child", "Adult", "Baby Face", etc.)
+## Apply a Preset
 
-### 3. Click Save Button
-Click the "Save" button to save the current blend shape settings as a preset.
+1. Find the preset you want to use in the "Saved Presets" list.
+2. Move the "Strength" slider for that preset. The face will change instantly.
 
-## How to Use Presets
+| Strength | Result |
+|---|---|
+| 0% | Not applied |
+| 50% | Applied at half strength |
+| 100% | Fully applied |
 
-### 1. Select from Saved Presets
-Your saved presets are displayed in the "Saved Presets" section.
+![assets](/assets/images/preset_assets_slider2.gif)
 
-### 2. Apply with Intensity Slider
-Each preset has an "Intensity" slider:
-- **0%**: Do not apply the preset
-- **50%**: Apply the preset at half intensity
-- **100%**: Apply the preset completely
-![assets]({{ site.baseurl }}/assets/images/preset_assets_slider2.gif)
+You can blend faces by raising the strength of multiple presets at once (e.g., "Child" at 50%, "Adult" at 30%).
 
-### 3. Real-time Preview
-As you move the slider, the blend shape changes in real-time.
-
-## Convenient Features
-
-### Blending Presets
-You can apply multiple presets simultaneously to create new blend shapes.
-- Example: Apply "Child" at 50% and "Adult" at 30% to set your desired blend shape.
-![assets]({{ site.baseurl }}/assets/images/preset_assets_slider.gif)
-
-### Accessing the Preset Folder
-Click the 📁 button next to "Saved Presets:" to open the folder where presets are saved in the project window.
-
-### Delete Presets
-Click the "X" button on each preset to delete it after confirmation.
-
-## Notes
-
-- Presets are saved per project
-- Presets are retained even after restarting Unity
-- Preset files are saved in `Assets/emudotto/Menno/Resources/Face_Presets` 
+![assets](/assets/images/preset_assets_slider.gif)

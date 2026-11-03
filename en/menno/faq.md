@@ -1,70 +1,51 @@
 ---
-title: ❓Frequently Asked Questions (FAQ)
-parent: Menno
+title: Frequently Asked Questions (FAQ)
 nav_order: 8
-permalink: /menno/faq/
-lang: en
 ---
 
-# Menno Avatar - Frequently Asked Questions (FAQ)
+# Frequently Asked Questions (FAQ)
 
-This page answers common questions and issues related to the Menno avatar.
+Check the causes and fixes for common issues in Menno.
 
-## Contents
+## Gaze (EyePointer)
 
-1. [EyePointer not working properly](#eyepointer-issues)
-2. [Issues with specific outfits](#outfit-issues)
+### Why won't the eyes move after installing Siromori Eye Pointer?
 
-## EyePointer Issues
+The default animation of [Siromori Eye Pointer](https://booth.pm/ja/items/4742883) does not support the `UpperChest` bone in Menno. You can fix this using either of the following methods.
 
-### Symptoms
-[Siromori Eye Pointer](https://booth.pm/ja/items/4742883) doesn't move the eyes or doesn't function correctly for eye tracking.
+**To fix with M. Avatar Setting v1.2.8 or later**
 
-### Cause
-The Menno avatar has an `UpperChest` bone in its hierarchy, which isn't compatible with the standard EyePointer animations.
+1. Download [Menno_v1.01_M.AvatarSetting_v1.2.8.zip](https://emudotto.booth.pm/items/6504220).
+2. In the import window, check only the `Scripts` folder and import it.
+3. Open `Window > M Avatar Setting` from the Unity menu.
+4. Expand the Debug section at the bottom of the window.
+5. Click the "fixEyePointer" button.
 
-### Solutions
+::: warning Note
+Importing folders other than `Scripts` may overwrite Menno's textures and materials.
+:::
 
-#### If you have M Avatar Setting v1.2.8 or later
+**To fix manually**
 
-1. Download [Menno_v1.01_M.AvatarSetting_v1.2.8.zip](https://emudotto.booth.pm/items/6504220)
-2. **Important**: When importing, only check the Scripts folder (importing other folders may overwrite Menno's textures and materials)
-3. Open M Avatar Setting from Unity's top menu: `Window > M Avatar Setting`
-4. Expand the Debug section at the bottom of the window and click the "fixEyePointer" button
-5. This will apply EyePointer animations compatible with Menno's UpperChest bone structure
+1. Open the following animation files:
+   - `Assets/Siromori/EyePointer/Animations/Toggle_Off.anim`
+   - `Assets/Siromori/EyePointer/Animations/Toggle_On.anim`
+   - `Assets/Siromori/EyePointer/Animations/Toggle_On_NoLook.anim`
+2. Add `UpperChest` to all eye bone paths in the file (e.g., `LeftEye`, `RightEye`). Example: Change `Armature/Hips/Spine/Chest/Neck/Head/LeftEye` to `Armature/Hips/Spine/Chest/UpperChest/Neck/Head/LeftEye`.
 
-#### Manual Fix
+## Clothing
 
-You can manually modify the animation paths:
+### Why doesn't the pose revert after crouching with Z when wearing certain outfits?
 
-1. Locate these animation files:
-   - Assets/Siromori/EyePointer/Animations/Toggle_Off.anim
-   - Assets/Siromori/EyePointer/Animations/Toggle_On.anim
-   - Assets/Siromori/EyePointer/Animations/Toggle_On_NoLook.anim
-2. Modify the eye bone paths from `Armature/Hips/Spine/Chest/Neck/Head/LeftEye` to
-   `Armature/Hips/Spine/Chest/UpperChest/Neck/Head/LeftEye` (and similar for other paths)
+This occurs because there is a collider object directly under the outfit's Armature with a Shape Type of `Plane` and an X-axis rotation of 90 degrees. Change the X-axis rotation of that collider from `90` to `0` to fix it.
 
-## Outfit Issues
+Confirmed outfits:
 
-### Symptoms
-When wearing certain outfits, the avatar may not return to normal posture after crouching with the Z button, or may exhibit other strange behaviors.
+- Pirouette's "[Arcane Attire](https://booth.pm/ja/items/6151859)" (Mage-style): Follow the steps in "plusheadのルェルツ_Rwerutu_に着せる方へ.png" on the download page.
+- ISHTAR LIBERALIS's "[Theologica](https://booth.pm/ja/items/6350299)" (Novice-style): Change the collider's X-axis rotation from `90` to `0`.
 
-### Affected Outfits
-- "[Arcane Attire](https://booth.pm/ja/items/6151859)" by Pirouette: A wizard-themed outfit set
-- "[Theologica](https://booth.pm/ja/items/6350299)" by ISHTAR LIBERALIS: A nun-themed outfit set
+## Other
 
-### Cause
-These outfits have collider objects with Shape Type set to Plane directly under the Armature, with their X-axis rotation set to 90 degrees, which causes issues with the avatar's movement.
+### Where should I ask questions not listed here?
 
-### Solutions
-
-#### For "Arcane Attire"
-1. Follow the instructions in the "plusheadのルェルツ_Rwerutu_に着せる方へ.png" image included in the BOOTH download page for Arcane Attire
-2. Specifically, change the collider object's X-axis rotation from 90 degrees to 0 degrees
-
-#### For "Theologica"
-Similarly, check the collider object of the outfit and change its X-axis rotation from 90 degrees to 0 degrees to resolve the issue.
-
-## Other Questions
-
-If you have any other questions or issues, please contact us via [X(Twitter)](https://x.com/_emudotto). 
+Please contact [X (Twitter)](https://x.com/_emudotto).

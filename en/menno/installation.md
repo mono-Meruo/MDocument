@@ -1,112 +1,79 @@
 ---
-title: ⬇️Installation
-parent: Menno
+title: Installation
 nav_order: 1
-permalink: /menno/installation/
-lang: en
 ---
 
-# Installing Menno from Unity and How to Use M Avatar Setting
+# Installation
+
+Steps to install Menno purchased from BOOTH into Unity and upload it to VRChat.
+
+## Video (Installation and M. Avatar Setting Usage)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/imeaf9TB4ME?si=0a-RL1EgCnXRjdrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# Menno - Installation
+## Requirements
 
-This page explains how to install the Menno avatar.
+| Requirement | How to get it |
+|---|---|
+| [VRChat Creator Companion (VCC)](https://vcc.docs.vrchat.com/#download-it) | Download from the official website |
+| Unity 2022.3.x | Install via VCC |
+| lilToon | Included in `1. liltoon and MA.unitypackage` |
+| Modular Avatar | Included in `1. liltoon and MA.unitypackage` |
 
-## Structure of Downloaded Files
+## Archive Contents
 
-When you extract the files downloaded from BOOTH, you will see the following structure:
+Extracting the BOOTH archive yields the following structure:
 
 ```
-📁 License
-   📄 en.pdf
-   📄 ja.pdf
-   📄 ko.pdf
-   📄 zh.pdf
-📁 Resources
-   📁 Menno
-      📁 FBX
-      📁 Texture
-   📁 ToggleProps
-      📁 FBX
-      📁 Texture
-📄 1. liltoon and MA.unitypackage
-📄 2. Menno.unitypackage
+License/                         # License PDF (en / ja / ko / zh)
+Resources/
+  Menno/                         # FBX, Texture
+  ToggleProps/                   # FBX, Texture
+1. liltoon and MA.unitypackage   # lilToon and Modular Avatar (import first)
+2. Menno.unitypackage            # Menno package (import second)
 ```
 
-* **License** - License information in various languages
-* **Resources** - Resource files including FBX and textures for the avatar
-* **1. liltoon and MA.unitypackage** - The first package to import (includes liltoon and Modular Avatar)
-* **2. Menno.unitypackage** - The second package to import containing the Menno avatar
+## Installation Steps
 
-## Prerequisites
+### 1. Create a Project
 
-To use the Menno avatar, you will need:
+1. Download and install VCC ([VCC](https://vcc.docs.vrchat.com/#download-it) or [VRChat official website](https://vrchat.com/home/download)).
+2. Launch VCC and complete the initial setup. If you do not have Unity Hub or Unity 2022.3.x, install them here.
+3. Click "Create New Project".
+4. Specify the project name and save location.
+5. Select "Avatar" as the template.
+6. Click "Create Project".
+7. Click "Open in Unity".
 
-* [VRChat Creator Companion (VCC)](https://vcc.docs.vrchat.com/#download-it)
-* Unity 2022.3.x (installed through VCC)
-* Liltoon
-  (installed through 1. liltoon and MA.unitypackage)
-* Modular Avatar
-  (installed through 1. liltoon and MA.unitypackage)
+### 2. Import Packages
 
-## Installation Steps (Using VCC)
+1. Double-click `1. liltoon and MA.unitypackage`.
+2. Click "Import" in the import window.
+3. Double-click `2. Menno.unitypackage`.
+4. Click "Import" in the import window.
 
-### 1. Set up VRChat Creator Companion
+The avatar is placed in `Assets/emudotto/Menno`. M. Avatar Setting is included, so no additional import is required.
 
-1. Download and install VRChat Creator Companion (VCC) from the [VRChat official site](https://vrchat.com/home/download) or [VCC Download It](https://vcc.docs.vrchat.com/#download-it)
-2. Launch VCC and complete the initial setup
-   - Install Unity Hub if needed
-   - Install Unity 2022.3.x
+::: tip
+If you have already installed Modular Avatar via VCC, importing `1. liltoon and MA.unitypackage` is not required.
+:::
 
-### 2. Create an Avatar Project with VCC
+### 3. Place in Scene
 
-1. Click "Create New Project" in VCC
-2. Choose a project name and location
-3. Select "Avatar" as the template
-4. Click the "Create Project" button
-5. Once the project is created, click "Open in Unity"
+Place it using one of the following methods:
 
-### 3. Import Required Packages
+- **Use Sample Scene (Recommended)**: Double-click `Assets/emudotto/Menno/MennoScene.unity` to open it. The avatar, environment, and lighting are already configured.
+- **Add to Existing Scene**: Drag and drop `Assets/emudotto/Menno/Menno.prefab` into the scene view.
 
-1. Double-click `1. liltoon and MA.unitypackage` to import
-   - This package adds liltoon and Modular Avatar
-   - If you have already installed Modular Avatar through VCC, you can skip this step
-2. Click the "Import" button in the import window
+### 4. Configure with M. Avatar Setting
 
-### 4. Import Menno Avatar
+1. Select Menno in the scene.
+2. Open M. Avatar Setting. You can access it from the menu (`Window > M Avatar Setting`) or click the "Open M. Avatar Setting" button in the Inspector.
+3. Apply the required settings. Refer to [M. Avatar Setting](/en/avatar-setting/) for usage instructions.
 
-1. Double-click `2. Menno.unitypackage` to import
-2. Click the "Import" button in the import window
-3. After importing, the avatar will be placed in the `Assets/emudotto/Menno` folder
-   - M. Avatar Setting is also imported at this point. You don't need to import it separately.
+### 5. Upload to VRChat
 
-### 5. Place the Avatar in a Scene
-
-You can place the avatar in a scene using one of the following methods:
-
-#### Method 1: Use the Sample Scene (Recommended)
-1. In the Unity Project view, find `Assets/emudotto/Menno/MennoScene.unity`
-2. Double-click `MennoScene.unity` to open it
-   - This scene already has the Menno avatar placed
-   - Environment and lighting are already set up
-
-#### Method 2: Add the Avatar to an Existing Scene
-1. In the Unity Project view, find `Assets/emudotto/Menno/Menno.prefab`
-2. Drag and drop Menno.prefab into the scene view
-
-### 6. Configure the Avatar
-
-1. Select the Menno object in the scene
-2. Open M. Avatar Setting ([Details here]({{ site.baseurl }}/avatar-setting/))
-   - Select `Window > M Avatar Setting` from the Unity menu
-   - Or click on Menno in the Inspector and click the "Open M. Avatar Setting" button
-3. Configure the avatar settings as needed
-
-### 7. Upload to VRChat
-
-1. Select the Menno object in the scene
-2. Open the VRChat SDK Control Panel
-3. Click the "Build & Publish" button
-4. Enter the required information and complete the upload 
+1. Select Menno in the scene.
+2. Open the VRChat SDK Control Panel.
+3. Click "Build & Publish".
+4. Enter the required information and upload.

@@ -1,157 +1,115 @@
 ---
 title: Shape Keys List
-parent: Menno
 nav_order: 6
-permalink: /menno/shapekeys/
-lang: en
 ---
 
-# Shape Keys List and Description
+# Shape Key List
 
-Shape keys are functions that transform the shape of a 3D model. The Menno model has a total of 885 shape keys implemented, allowing for detailed adjustments to the character's facial expressions and body shape.
+You can look up the names and purposes of Menno's shape keys (885 in total). Use them as a reference when adjusting facial expressions or body proportions.
 
-## Shape Keys Overview
+## Usage
 
-### Facial Shape Keys (Total 697 functional shape keys, excluding empty and divider shape keys)
+1. Select the model in Unity's Inspector.
+2. Open the SkinnedMeshRenderer component.
+3. Adjust the slider for each shape key under "Blend Shapes" (0 = disabled, 100 = maximum).
+
+Combine multiple shape keys to create custom expressions or body shapes.
+
+## Face (855 keys)
+
+There are 697 functional shape keys (excluding Empty and divider keys). Each category includes options for both eyes, as well as left (`_L`) and right (`_R`) versions, allowing for asymmetrical expressions.
 
 | Category | Count | Description |
-|---------|------|-------------|
-| VRC | 18 | VRChat shape keys (v_aa, v_ch, v_dd, etc. for voice recognition and gaze control) |
-| MMD | 47 | MikuMikuDance compatible expressions (a-i-u-e-o, smile, wink, etc.) |
-| Perfect-Sync | 52 | Experimental shape keys for expression synchronization |
-| EYE | 51 | Eye expression control (closing, smiling, raised, lowered, half-closed, etc.) |
+|---------|-----|------|
+| VRC | 18 | VRChat compatible (audio visemes like v_aa, v_ch, v_dd, and gaze control) |
+| EYE | 51 | Eye expressions (closing, smiling, upturned eyes, droopy eyes, half-closed eyes, etc.) |
 | EYE_EX | 3 | Eye shader effects (Shader_ON, Shader_Big, Grabpass_ON, etc.) |
-| EYE_Action | 7 | Eye special effects (tears, hearts, spinning, shock, stars, etc.) |
-| EYE_Option | 67 | Detailed eye adjustments (light, dark circles, position, size, spacing, etc.) |
-| PUPIL_Option | 35 | Pupil adjustments (white pupils, convergence, divergence, size, forward/backward movement, etc.) |
-| IRIS_Option | 18 | Sclera adjustments (blur, size, forward/backward movement, etc.) |
-| EYELID_Option | 74 | Eyelid adjustments (ends, starts, detailed up/down/left/right movements, etc.) |
-| EYELASH | 12 | Eyelash expressions (thin eyes, sleepy eyes, soft eyes, etc.) |
-| EYELASH_Option | 48 | Eyelash adjustments (thickness, length, position of upper/lower lashes, etc.) |
-| EYEBROW | 48 | Eyebrow expressions (raising/lowering, smiling, angry, worried, movement by specific areas, etc.) |
-| EYEBROW_Option | 10 | Eyebrow adjustments (thickness, shape, position, etc.) |
-| MOUTH | 53 | Mouth expressions (a-i-u-e-o, smile, grin, triangle, ω, various shapes) |
-| MOUTH_Option | 8 | Mouth adjustments (fangs, forward/backward position, cheeks, etc.) |
-| TONGUE | 12 | Tongue expressions (sticking out, bending, forward/backward/up/down movement, etc.) |
-| TONGUE_Option | 6 | Tongue adjustments (thin, thick, flat, length, etc.) |
-| TEETH_Option | 15 | Teeth adjustments (fangs, jagged, upper/lower position, etc.) |
-| FACE | 6 | Full face effects (blush, shock, wrinkles, etc.) |
-| NOSE_Option | 7 | Nose adjustments (up/down/left/right, forward/backward position, etc.) |
+| EYE_Action | 7 | Special eye effects (tears, hearts, swirling, dazed, stars, etc.) |
+| EYE_Option | 67 | Detailed eye adjustments (lighting, dark circles, position, size, spacing, etc.) |
+| PUPIL_Option | 35 | Pupil adjustments (white pupils, converging/diverging, scaling, forward/backward movement) |
+| IRIS_Option | 18 | Iris/white area adjustments (blurring, size, forward/backward movement) |
+| EYELID_Option | 74 | Eyelid adjustments (tips, edges, fine movements up/down/left/right) |
+| EYELASH | 12 | Eyelash expressions (narrowed eyes, sleepy eyes, soft eyes, etc.) |
+| EYELASH_Option | 48 | Eyelash adjustments (thickness, length, position for upper/lower lashes) |
+| EYEBROW | 48 | Eyebrow expressions (up/down, smiling, angry, confused, fine movements per segment) |
+| EYEBROW_Option | 10 | Eyebrow adjustments (thickness, shape, position) |
+| MOUTH | 53 | Mouth expressions (vowels a/i/u/e/o, smiling, nikka, triangle, omega, etc.) |
+| MOUTH_Option | 8 | Mouth adjustments (gum line, forward/backward position, cheeks) |
+| TONGUE | 12 | Tongue expressions (peep out, bend, forward/back/up/down movement) |
+| TONGUE_Option | 6 | Tongue adjustments (thin, thick, flat, volume, length) |
+| TEETH_Option | 15 | Teeth adjustments (gum line, jaggedness, upper/lower positioning) |
+| FACE | 6 | Full-face effects (blushing, dazed expression, wrinkles, etc.) |
+| NOSE_Option | 7 | Nose position adjustments (up/down/left/right, forward/backward) |
 | EAR_Option | 6 | Ear adjustments (elf ears, size, etc.) |
-| JAW_Option | 14 | Jaw adjustments (roundness, jaw shape, length, sharpness, etc.) |
-| SHRINK_Option | 2 | Face part shrinking (neck, ears) |
-| Empty for Updates | 183 | Reserved shape keys for updates |
-| Divider Shape Keys | 16 | Section dividers |
+| JAW_Option | 14 | Jaw adjustments (roundness, cheekbone shape, length, sharpness) |
+| SHRINK_Option | 2 | Feature scaling (neck, ears) |
+| MMD | 47 | MikuMikuDance compatible expressions (a/i/u/e/o, smirk, wink, etc.) |
+| Perfect-Sync | 52 | Expression sync (experimental) |
+| Empty (for updates) | 183 | Empty slots for updates |
 
-Each category includes shape keys not only for both eyes but also for the left eye (_L) and right eye (_R), allowing for asymmetrical expressions.
+Expression keys (EYE, MOUTH, EYEBROW, etc.) can be used for shaping adjustments, while adjustment keys (`_Option` suffix. e.g., EYE_Option, MOUTH_Option, JAW_Option) can be used for expression animations.
 
-### Body Shape Keys (30)
+### Perfect-Sync (Experimental)
 
-Mainly used for shrinking various body parts. Neck, shoulders, arms, hands, fingers, chest, back, waist, legs, feet, etc., can all have their reduction rate adjusted individually.
+This set enables more natural expression syncing. It controls the eyebrows (inner upper, outer upper, lower, etc.), eyes (up/down/left/right, blinking, squinting, etc.), cheeks (puffing, tightening, etc.), nose (wrinkling, etc.), jaw (open/close, forward/backward/left/right, etc.), and various mouth shapes. This may be changed in future updates.
 
-### Hair Shape Keys (Total 50)
+## Body (30 keys)
 
-The Hair_Bangs object includes the following functional shape keys (excluding Empty shape keys):
+Used to scale individual body parts. Targets include the neck, shoulders, arms, hands, fingers, chest, back, waist, legs, and feet.
 
-#### BANGS_Option (Front Bangs) - 31
-- Basic Styles:
-  - BANGS_OP_短く_Short: Shortens the bangs
-  - BANGS_OP_長く_Long: Lengthens the bangs
-  - BANGS_OP_ずらす_Shift: Shifts the bangs sideways
-  - BANGS_OP_ねぐせ_Bedhair: Creates a bed hair style
-  - BANGS_OP_ぱっつん_Straight: Creates straight-cut bangs
-  - BANGS_OP_ぱっつん短い_StraightShort: Creates short straight-cut bangs
-  - BANGS_OP_ぱっつん長め_StraightLong: Creates long straight-cut bangs
-- Individual Adjustments:
-  - BANGS_OP_01_Long to BANGS_OP_12_Long: Shape keys that adjust individual strands of the bangs one by one. Each number corresponds to a specific strand of the bangs, allowing them to be moved or shaped independently.
-  - BANGS_OP_01_Short to BANGS_OP_12_Short: Shape keys that adjust individual strands of the bangs one by one. Each number corresponds to a specific strand of the bangs, allowing them to be moved or shaped independently.
+## Hair (50 keys)
 
-#### FRONT_Option (Front Hair) - 5
-- Individual Adjustments:
-  - FRONT_OP_01_Long: Shape key for adjusting a specific strand of front hair individually.
-  - FRONT_OP_02_Long: Shape key for adjusting another strand of front hair individually.
-  - FRONT_OP_01_Short: Shape key for adjusting a specific strand of front hair individually.
-  - FRONT_OP_02_Short: Shape key for adjusting another strand of front hair individually.
-  - FRONT_OP_Empty: Empty adjustment item
+Included in the Hair_Bangs object (functional shape keys excluding Empty). Numbered keys (01, 02, etc.) correspond to individual hair strands, allowing you to move or reshape specific clumps.
 
-#### SIDES_Option (Side Hair) - 14
-- Basic Styles:
-  - SIDES_OP_短く_Short: Shortens the side hair
-  - SIDES_OP_長く_Long: Lengthens the side hair
-  - SIDES_OP_ぱっつん_Straight: Creates straight-cut side hair
-- Individual Adjustments:
-  - SIDES_OP_01_Long to SIDES_OP_05_Long: Shape keys that adjust individual strands of the side hair one by one. Each number corresponds to a specific strand of side hair, allowing them to be moved or shaped independently.
-  - SIDES_OP_01_Short to SIDES_OP_05_Short: Shape keys that adjust individual strands of the side hair one by one. Each number corresponds to a specific strand of side hair, allowing them to be moved or shaped independently.
-  - SIDES_OP_Empty: Empty adjustment item
+### BANGS_Option (Bangs, 31 keys)
 
-By using these numbered shape keys (01, 02, etc.), you can freely adjust specific strands of hair one by one, rather than the entire hairstyle. For example, you can move only a specific strand on the left side of the bangs, or change the shape of only a specific strand of the side hair. This allows you to customize the details of the hairstyle to your liking.
+| Shape Key | Description |
+|-------------|------|
+| BANGS_OP_短く_Short | Shorten bangs |
+| BANGS_OP_長く_Long | Lengthen bangs |
+| BANGS_OP_ずらす_Shift | Shift bangs sideways |
+| BANGS_OP_ねぐせ_Bedhair | Bedhead style |
+| BANGS_OP_ぱっつん_Straight | Straight bangs |
+| BANGS_OP_ぱっつん短い_StraightShort | Short straight bangs |
+| BANGS_OP_ぱっつん長め_StraightLong | Long straight bangs |
+| BANGS_OP_01_Long～BANGS_OP_12_Long | Adjust individual bang clumps (long) |
+| BANGS_OP_01_Short～BANGS_OP_12_Short | Adjust individual bang clumps (short) |
 
-## About Empty Shape Keys
+### FRONT_Option (Front hair, 5 keys)
 
-When updating in Unity, inserting new shape keys can shift the order of existing shape keys, causing inconsistencies with previously set values. To prevent this, many empty shape keys (Empty) are placed in advance. During updates, these Empty shape keys are used to add new features.
+| Shape Key | Description |
+|-------------|------|
+| FRONT_OP_01_Long | Adjust one front hair clump |
+| FRONT_OP_02_Long | Adjust another front hair clump |
+| FRONT_OP_01_Short | Adjust one front hair clump (short) |
+| FRONT_OP_02_Short | Adjust another front hair clump (short) |
+| FRONT_OP_Empty | Empty |
 
-## About Perfect-Sync Shape Keys (Experimental)
+### SIDES_Option (Side hair, 14 keys)
 
-Perfect-Sync is an experimental set of shape keys designed for more natural expression synchronization. It enables fine control over various facial movements:
+| Shape Key | Description |
+|-------------|------|
+| SIDES_OP_短く_Short | Shorten side hair |
+| SIDES_OP_長く_Long | Lengthen side hair |
+| SIDES_OP_ぱっつん_Straight | Straighten side hair |
+| SIDES_OP_01_Long～SIDES_OP_05_Long | Adjust individual side hair clumps (long) |
+| SIDES_OP_01_Short～SIDES_OP_05_Short | Adjust individual side hair clumps (short) |
+| SIDES_OP_Empty | Empty |
 
-- Eyebrow movements (inner up, outer up, down, etc.)
-- Eye movements (up/down/left/right, blinking, squinting, etc.)
-- Cheek movements (puffing, tightening, etc.)
-- Nose movements (wrinkles, etc.)
-- Jaw movements (opening/closing, forward/backward/left/right, etc.)
-- Mouth movements (various shapes and expressions)
+## Empty Shape Keys
 
-These shape keys are in the experimental stage and may be subject to changes in future updates.
+Adding shape keys in the middle of a list in Unity can shift existing indices, causing preset values to mismatch. To prevent this, a number of empty shape keys (Empty) are pre-allocated, and new features are added to these slots during updates.
 
-## How to Use Shape Keys
+## Fixing Expression Animations
 
-1. Select the model in the Unity Inspector
-2. Select the SkinnedMeshRenderer component
-3. Adjust each shape key slider in the "Blend Shapes" section
-4. Set values between 0 and 100 (0 = no effect, 100 = maximum effect)
+::: warning Note
+If you make significant changes to the eyes, mouth, or other features, default expression animations built on the original mesh may break (causing unnatural blinking, desynced lip-sync, etc.). In such cases, adjust the animation using the following steps.
+:::
 
-By combining shape keys, you can create your own expressions and body shapes.
-
-## Notes on Shape Key Adjustments
-
-### Impact on Animations
-
-Making significant changes to parts related to expressions, such as eyes and mouth, may cause default expression animations to not work properly. This is because the animations are created based on the original shape.
-
-For example:
-- Greatly changing the size or position of the eyes can make blinking animations unnatural
-- Changing the shape of the mouth can cause speech animations to become misaligned
-- Changing the proportions of the face can disrupt the entire expression animation
-
-In such cases, it is necessary to adjust the animation clips to match the new shape.
-
-### Flexible Use of Shape Keys
-
-In the Menno model, you can use expression shape keys (EYE, MOUTH, EYEBROW, etc.) for body shape adjustments, or conversely, use detailed adjustment shape keys (_Option categories) for expressions.
-
-For example:
-- Combine EYE_Option shape keys to create your own eye expressions
-- Use MOUTH_Option to create special mouth shapes as expressions
-- Incorporate JAW_Option, normally used for adjustments, into expression animations
-
-### How to Adjust Expression Animations
-
-If you have significantly changed shape keys, you will need to adjust the expression animations as well. You can adjust them in the Menno model using the following steps:
-
-1. Set the Menno_Layer_FX.controller in the Animator component
-   - Select the root object of the Menno avatar
-   - Add "Menno_Layer_FX.controller" to the Animator component
-   - This controller includes default settings for expression animations
-
-2. Adjust default expressions in the Animation window
-   - Open the Animation window from Unity's "Window" → "Animation" → "Animation"
-   - Select the Menno avatar in the scene
-   - Select the existing expression animation displayed in the Animation window
-   - Change the keyframes corresponding to the adjusted shape keys
-     - Click on keyframes to edit values
-
-3. Test the adjusted expressions
-   - Check the movement of expressions using VRChat Gesture Manager, etc.
-   - Make fine adjustments as needed
-
-With this method, you can properly adjust existing expression animations to match your customized shape key settings. 
+1. Select the root object of the Menno avatar.
+2. Assign `Menno_Layer_FX.controller` to the Animator component (contains default expression animation settings).
+3. Open the Animation window via `Window > Animation > Animation`.
+4. Select the Menno avatar in the scene.
+5. Choose an existing expression animation in the Animation window.
+6. Click the keyframe for the modified shape key and edit its value.
+7. Verify the expression movement in VRChat Gesture Manager or similar tools, and make fine adjustments if needed.

@@ -1,112 +1,79 @@
 ---
-title: ⬇️安装
-parent: Menno
+title: 安装
 nav_order: 1
-permalink: /menno/installation/
-lang: zh
 ---
 
-# 从Unity安装Menno和如何使用M Avatar Setting
+# 安装指南
+
+以下是将 BOOTH 购买的 Menno 导入 Unity 并上传至 VRChat 的步骤。
+
+## 视频演示（安装与 M. Avatar Setting 操作）
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/imeaf9TB4ME?si=0a-RL1EgCnXRjdrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# Menno - 安装
+## 必备工具
 
-本页说明如何安装Menno虚拟形象。
+| 所需内容 | 获取方式 |
+|---|---|
+| [VRChat Creator Companion (VCC)](https://vcc.docs.vrchat.com/#download-it) | 从官网下载 |
+| Unity 2022.3.x | 通过 VCC 安装 |
+| lilToon | 包含在 `1. liltoon and MA.unitypackage` 中 |
+| Modular Avatar | 包含在 `1. liltoon and MA.unitypackage` 中 |
 
-## 下载文件的结构
+## 下载文件内容
 
-从BOOTH下载的文件解压后，您将看到以下结构：
+解压 BOOTH 提供的压缩包后，文件结构如下：
 
 ```
-📁 License
-   📄 en.pdf
-   📄 ja.pdf
-   📄 ko.pdf
-   📄 zh.pdf
-📁 Resources
-   📁 Menno
-      📁 FBX
-      📁 Texture
-   📁 ToggleProps
-      📁 FBX
-      📁 Texture
-📄 1. liltoon and MA.unitypackage
-📄 2. Menno.unitypackage
+License/                         # 授权 PDF 文档（en / ja / ko / zh）
+Resources/
+  Menno/                         # FBX 模型与贴图
+  ToggleProps/                   # FBX 模型与贴图
+1. liltoon and MA.unitypackage   # lilToon 与 Modular Avatar（需优先导入）
+2. Menno.unitypackage            # Menno 主体资源（随后导入）
 ```
 
-* **License** - 各种语言的许可证信息
-* **Resources** - 包含虚拟形象的FBX和纹理的资源文件
-* **1. liltoon and MA.unitypackage** - 第一个导入的包（包含liltoon和Modular Avatar）
-* **2. Menno.unitypackage** - 第二个导入的包，包含Menno虚拟形象
+## 操作步骤
 
-## 前提条件
+### 1. 创建项目
 
-要使用Menno虚拟形象，您需要：
+1. 下载并安装 VCC（[VCC](https://vcc.docs.vrchat.com/#download-it) 或 [VRChat 官网](https://vrchat.com/home/download)）。
+2. 启动 VCC 并完成首次设置。若未安装 Unity Hub 和 Unity 2022.3.x，请在此步骤中完成安装。
+3. 点击「新建项目」。
+4. 输入项目名称并选择保存路径。
+5. 模板选择「Avatar」。
+6. 点击「创建项目」。
+7. 点击「在 Unity 中打开」。
 
-* [VRChat Creator Companion (VCC)](https://vcc.docs.vrchat.com/#download-it)
-* Unity 2022.3.x（通过VCC安装）
-* Liltoon
-  （通过1. liltoon and MA.unitypackage安装）
-* Modular Avatar
-  （通过1. liltoon and MA.unitypackage安装）
+### 2. 导入包
 
-## 安装步骤（使用VCC）
+1. 双击 `1. liltoon and MA.unitypackage`。
+2. 在导入窗口中点击「导入」。
+3. 双击 `2. Menno.unitypackage`。
+4. 在导入窗口中点击「导入」。
 
-### 1. 设置VRChat Creator Companion
+模型资源将存入 `Assets/emudotto/Menno` 目录。由于已包含 M. Avatar Setting，无需单独导入。
 
-1. 从[VRChat官方网站](https://vrchat.com/home/download)或[VCC下载页面](https://vcc.docs.vrchat.com/#download-it)下载并安装VRChat Creator Companion (VCC)
-2. 启动VCC并完成初始设置
-   - 如果需要，安装Unity Hub
-   - 安装Unity 2022.3.x
+::: tip
+若已通过 VCC 安装 Modular Avatar，则无需导入 `1. liltoon and MA.unitypackage`。
+:::
 
-### 2. 使用VCC创建虚拟形象项目
+### 3. 放置到场景中
 
-1. 在VCC中点击"创建新项目"
-2. 选择项目名称和位置
-3. 选择"Avatar"作为模板
-4. 点击"创建项目"按钮
-5. 项目创建完成后，点击"在Unity中打开"
+请按以下任一方式将其放置到场景中：
 
-### 3. 导入所需包
+- **使用示例场景（推荐）**：双击 `Assets/emudotto/Menno/MennoScene.unity` 打开。模型、环境与灯光均已配置完毕。
+- **添加至现有场景**：将 `Assets/emudotto/Menno/Menno.prefab` 拖拽至 Scene 视图即可。
 
-1. 双击`1. liltoon and MA.unitypackage`导入
-   - 此包添加liltoon和Modular Avatar
-   - 如果您已通过VCC安装了Modular Avatar，可以跳过此步骤
-2. 在导入窗口中点击"导入"按钮
+### 4. 使用 M. Avatar Setting 进行配置
 
-### 4. 导入Menno虚拟形象
+1. 选中场景中的 Menno。
+2. 打开 M. Avatar Setting。可通过菜单栏 `Window > M Avatar Setting`，或点击 Inspector 面板中的「打开 M. Avatar Setting」按钮进入。
+3. 按需完成相关设置。详细用法请参阅 [M. Avatar Setting](/zh/avatar-setting/)。
 
-1. 双击`2. Menno.unitypackage`导入
-2. 在导入窗口中点击"导入"按钮
-3. 导入后，虚拟形象将放置在`Assets/emudotto/Menno`文件夹中
-   - M. Avatar Setting也会在此刻导入。您不需要单独导入它。
+### 5. 上传至 VRChat
 
-### 5. 将虚拟形象放置在场景中
-
-您可以使用以下方法之一将虚拟形象放置在场景中：
-
-#### 方法1：使用示例场景（推荐）
-1. 在Unity项目视图中，找到`Assets/emudotto/Menno/MennoScene.unity`
-2. 双击`MennoScene.unity`打开它
-   - 此场景已放置Menno虚拟形象
-   - 环境和光照已设置好
-
-#### 方法2：将虚拟形象添加到现有场景
-1. 在Unity项目视图中，找到`Assets/emudotto/Menno/Menno.prefab`
-2. 将Menno.prefab拖放到场景视图中
-
-### 6. 配置虚拟形象
-
-1. 在场景中选择Menno对象
-2. 打开M. Avatar Setting（[详情请见]({{ site.baseurl }}/avatar-setting/)）
-   - 从Unity菜单中选择`Window > M Avatar Setting`
-   - 或在Inspector中点击Menno，然后点击"Open M. Avatar Setting"按钮
-3. 根据需要配置虚拟形象设置
-
-### 7. 上传到VRChat
-
-1. 在场景中选择Menno对象
-2. 打开VRChat SDK控制面板
-3. 点击"Build & Publish"按钮
-4. 输入所需信息并完成上传 
+1. 选中场景中的 Menno。
+2. 打开 VRChat SDK 的控制面板。
+3. 点击「Build & Publish」。
+4. 填写必要信息并完成上传。

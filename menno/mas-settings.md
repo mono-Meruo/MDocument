@@ -1,40 +1,31 @@
 ---
-title: ⚙️M. Avatar Setting設定
-parent: Menno
-has_children: true
+title: M. Avatar Setting設定
 nav_order: 5
-permalink: /menno/mas-settings/
-lang: ja
 ---
 
-# Menno - M. Avatar Setting設定
+# M. Avatar Setting設定
 
-M. Avatar Settingを使用すると、Mennoアバターのさまざまな設定を簡単に調整できます。このページでは、Mennoアバター専用の設定オプションについて説明します。
+M. Avatar Settingを使うと、Mennoの顔・髪・アイテムの設定をまとめて変更できます。ここから各設定ページに進めます。
 
-![M. Avatar Setting UI]({{ site.baseurl }}/assets/images/mas_ui.png)
+![M. Avatar Setting UI](/assets/images/mas_ui.png)
 
-## M. Avatar Settingとは
+## 設定項目
 
-M. Avatar Settingは、Mennoアバターを簡単にカスタマイズするためのツールです。直感的なUIを使用して、顔の表情、髪の色、衣装などを調整できます。
+| 設定 | 内容 |
+|---|---|
+| [顔の設定](/menno/mas-settings/face/) | 表情やブレンドシェイプの調整 |
+| [髪の毛の設定](/menno/mas-settings/hair/) | 髪の色や形状の調整 |
+| [アイテムの設定](/menno/mas-settings/items/) | 衣装やアクセサリーの設定 |
 
-## 設定カテゴリ
+## 使い方
 
-Mennoアバター用のM. Avatar Settingでは、以下の設定カテゴリが利用可能です：
+1. Mennoをシーンに配置します。
+2. Unityのメニューから `Window > M Avatar Setting` を開きます（詳しくは[M. Avatar Setting](/avatar-setting/)）。
+3. 変更したい設定カテゴリを展開し、値を調整します。
 
-* [**顔の設定**]({{ site.baseurl }}/menno/mas-settings/face/) - 表情やブレンドシェイプの調整
-* [**髪の毛の設定**]({{ site.baseurl }}/menno/mas-settings/hair/) - 髪の色や形状の調整
-* [**アイテムの設定**]({{ site.baseurl }}/menno/mas-settings/items/) - 衣装やアクセサリーの設定
+設定は自動で保存され、次回も適用されます。
 
-各設定カテゴリの詳細については、それぞれのリンクをクリックして確認してください。
-
-## 使用方法
-
-1. Mennoアバターをシーンに配置します
-2. M. Avatar Settingウィンドウを開きます（[開き方の詳細]({{ site.baseurl }}/avatar-setting/)）
-3. 必要に応じて各設定カテゴリを展開し、パラメータを調整します
-4. 設定は自動的に保存され、次回も適用されます
-
-## 注意事項
-
-* 設定はMennoアバター専用であり、他のアバターには適用されません
-* EmmelieとのM. Avatar Settingには競合が起こる可能性があるため、新規プロジェクトでのインポートをおすすめします。
+::: warning 注意
+- この設定はMenno専用です。他のアバターには適用されません。
+- EmmelieのM. Avatar Settingと競合することがあるため、新規プロジェクトへのインポートをおすすめします。
+:::

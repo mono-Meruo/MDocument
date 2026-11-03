@@ -1,12 +1,9 @@
 ---
 title: Non-Commercial Project License
-parent: M. Avatar License
 nav_order: 2
-permalink: /licenses/educational-permanent-license/
-lang: en
 ---
 
-Terms of Use for Non-Commercial Project License
+# Terms of Use for Non-Commercial Project License
 
 These terms set forth the conditions for the use of the 3D model (hereinafter referred to as "the Model") provided by M. (hereinafter referred to as "the Licensor") in non-commercial projects. By purchasing the Model, the User is deemed to have agreed to these terms.
 

@@ -1,49 +1,34 @@
 ---
-title: ⚙️Hair Settings
-parent: ⚙️M. Avatar Setting
-grand_parent: Menno
+title: Hair Settings
 nav_order: 2
-permalink: /menno/mas-settings/hair/
-lang: en
 ---
 
-# Menno - Hair Settings
+# Hair Settings
 
-M. Avatar Setting allows you to adjust the color and shape of the Menno avatar's hair.
+You can adjust hair color and hairstyles using blendshapes.
 
-![Hair Settings UI]({{ site.baseurl }}/assets/images/hair_settings.png)
+![Hair Settings UI](/assets/images/hair_settings.png)
 
-## Hair Color Settings
-
-You can select the hair color of the Menno avatar from the presets provided.
-
-### Available Hair Colors
-
-* **Default** - Standard hair color
-* **Gray** - Gray hair color
-* **Black** - Black hair color
-
-You can instantly change the hair color by clicking on each color button.
-
-## Hair Style Adjustment
-
-You can finely adjust the hairstyle using the hair blend shapes.
-
-### Operation Method
+## Usage
 
 1. Open the M. Avatar Setting window
-2. Select the Menno avatar
+2. Select a Menno avatar
 3. Expand the "Hair Settings" section
-4. Expand each category and adjust the sliders
+4. Click the color button, or expand a category and adjust the slider
 
-## Resetting Settings
+## Settings
 
-If you want to reset all hair settings to their initial state, click the "Reset" button. A confirmation dialog will be displayed, and if you select "Yes", the settings will be reset.
+| Item | Options | Notes |
+|---|---|---|
+| Hair Color | Default / Gray / Black | Changes immediately upon clicking the button |
+| Hairstyle | Category-specific sliders | Adjusts hair blendshapes |
 
-## Notes
+The display language (Japanese/English) can be changed using the language toggle button in the top-right corner of the window.
 
-* Extreme settings may affect appearance and physics simulation
+::: warning Note
+Extreme settings may affect appearance and physics calculations.
+:::
 
-## Language Settings
+## Reset
 
-You can switch between Japanese and English with the language switch button in the upper right of M. Avatar Setting. The UI display will switch accordingly. 
+Click the "Reset" button, then select "Yes" in the confirmation dialog to restore all hair settings to their defaults.

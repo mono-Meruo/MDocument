@@ -1,22 +1,24 @@
 ---
-layout: home
+layout: page
 title: ホーム
-nav_order: 1
-permalink: /
-lang: ja
+description: VRChat 用アバターと Unity 拡張ツールの技術ドキュメントです。導入手順、設定、利用条件をまとめています。
+sidebar: false
+footer: false
+labels:
+  docs: ドキュメント
+  support: サポート
+upcoming:
+  - name: Emmelie
+    desc: アバター。ドキュメントは準備中です。
+support:
+  - name: X
+    text: "@_emudotto"
+    link: https://x.com/_emudotto
+    desc: 質問・不具合の報告
+  - name: BOOTH
+    text: emudotto.booth.pm
+    link: https://emudotto.booth.pm/
+    desc: 購入・ダウンロード
 ---
 
-# アバターとツールのドキュメント
-
-VRChat用のアバターとカスタマイズツールの概要を説明します。
-
-## アバター
-
-現在提供中のアバター：
-
-* **Emmelie**（準備中）
-* [**Menno**]({{ site.baseurl }}/menno/)
-
-## ツール
-
-* [**M. Avatar Setting**]({{ site.baseurl }}/avatar-setting/) - アバターカスタマイズツール
+<HomeIndex />

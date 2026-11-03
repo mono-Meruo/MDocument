@@ -1,8 +1,6 @@
 ---
-title: 📄 ライセンス
-parent: ⚙️M. Avatar Setting
+title: ライセンス
 nav_order: 5
-permalink: /avatar-setting/license/
 ---
 
 # M. Avatar Setting ライセンス

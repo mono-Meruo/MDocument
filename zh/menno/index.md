@@ -1,57 +1,34 @@
 ---
 title: Menno
+description: VRChat 虚拟形象。安装、自定义、模型结构、形状键以及在 M. Avatar Setting 中的设置。
 nav_order: 2
-has_children: true
-permalink: /menno/
-lang: zh
 ---
 
-# Menno 文档
+# Menno
 
-欢迎来到3D模型"Menno"的官方文档。
+可在此查看 M. Avatar 系列第二款 Avatar「Menno」的基本信息与更新日志。新用户请从[安装指南](/zh/menno/installation/)开始。
 
-## 目录
+## Avatar 信息
 
-- [安装]({{ site.baseurl }}/menno/installation/)
-- [模型结构]({{ site.baseurl }}/menno/structure/)
-- [自定义]({{ site.baseurl }}/menno/customization/)
-- [动画]({{ site.baseurl }}/menno/animation/)
-- [形状键]({{ site.baseurl }}/menno/shapekeys/)
-- [MAS设置]({{ site.baseurl }}/menno/mas-settings/)
-- [创作者指南]({{ site.baseurl }}/menno/creator-guide/)
-- [常见问题（FAQ）]({{ site.baseurl }}/menno/faq/)
+| 项目 | 内容 |
+|---|---|
+| 平台 | PC-VRChat |
+| 推荐 Unity 版本 | Unity 2022.3.x |
+| 多边形数量 | TBD |
+| 纹理分辨率 | TBD |
 
-# Menno虚拟形象
+## 更新日志
 
-Menno是M. Avatar系列中的第二个模型。
+### 250503 Menno v1.01
 
-## 虚拟形象信息
+- 修复了使用平底锅敲击 Avatar 时无法发出声音的问题
+- 整理牙齿设置中“上齿前”与“下齿前”的重复项
+- 修复移动“下齿前”时上齿也会联动的问题（确保下齿可独立运动）
+- 修复鼻子设置中“前”参数不可用的问题
+- 修复 Body_Base 的 Anchor override 未正确设置的问题
+- 修复在 MMD 场景中脸部闪烁的问题
+- 新增睫毛形状键：`EYELASH_OP_ジグザグ外側_Zigzag`（向外锯齿状）、`EYELASH_OP_シャープ_Sharp`（锐利造型）、`EYELASH_OP_下まつげ上げる_LowerUp`（下睫毛上翘）、`EYELASH_OP_上まつげ上げる_UpperUp`（上睫毛更大幅度上翘）
 
-- **支持平台**: PC-VRChat
-- **推荐Unity版本**: Unity 2022.3.x
-- **多边形数量**: 
-- **纹理分辨率**: 
+## 技术支持
 
-## 更新历史
-
-### 💠250503 Menno v1.01
-- **平底锅修复**:
-  • 修复了使用平底锅敲击虚拟形象时没有声音的问题
-- **牙齿设置改进**:
-  • 修正了设置菜单中"上前牙"和"下前牙"的重复项目
-  • 解决了移动"下前牙"时上牙也会跟着移动的问题，确保下牙可以独立运动
-- **鼻子设置修复**:
-  • 启用了之前无法使用的鼻子"前部"设置选项
-- **技术修复**:
-  • 为Body_Base添加了缺失的Anchor override设置
-  • 修复了在MMD世界中面部闪烁的问题，这个问题之前无法通过着色器调整解决
-- **睫毛增强**:
-  • 添加了新的睫毛形状键以提供更多自定义选项:
-    - EYELASH_OP_锯齿外侧_Zigzag: 创建向外边缘延伸的锯齿图案睫毛样式
-    - EYELASH_OP_锐利_Sharp: 创建更加锐利、更加清晰的睫毛外观
-    - EYELASH_OP_下睫毛上提_LowerUp: 调整下睫毛向上弯曲
-    - EYELASH_OP_上睫毛上提_UpperUp: 增强上睫毛的向上弯曲效果
-
-## 支持
-
-如果您有任何问题或疑问，请在[X(Twitter)](https://x.com/_emudotto)上联系我们。 
+如有任何疑问或遇到 Bug，请通过 [X (Twitter)](https://x.com/_emudotto) 联系开发者。

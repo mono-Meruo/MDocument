@@ -1,57 +1,34 @@
 ---
 title: Menno
+description: VRChat avatar. Installation, customization, model structure, shape keys and its settings in M. Avatar Setting.
 nav_order: 2
-has_children: true
-permalink: /menno/
-lang: en
 ---
 
-# Menno Documentation
+# Menno
 
-Welcome to the official documentation for the 3D model "Menno".
-
-## Table of Contents
-
-- [Installation]({{ site.baseurl }}/menno/installation/)
-- [Model Structure]({{ site.baseurl }}/menno/structure/)
-- [Customization]({{ site.baseurl }}/menno/customization/)
-- [Animation]({{ site.baseurl }}/menno/animation/)
-- [Shape Keys]({{ site.baseurl }}/menno/shapekeys/)
-- [MAS Settings]({{ site.baseurl }}/menno/mas-settings/)
-- [Creator Guide]({{ site.baseurl }}/menno/creator-guide/)
-- [Frequently Asked Questions (FAQ)]({{ site.baseurl }}/menno/faq/)
-
-# Menno Avatar
-
-Menno is the second model in the M. Avatar series.
+You can find basic information and update history for Menno, the second avatar in the M. Avatar series. New users should start with the [Installation Guide](/en/menno/installation/).
 
 ## Avatar Information
 
-- **Supported Platform**: PC-VRChat
-- **Recommended Unity Version**: Unity 2022.3.x
-- **Polygon Count**: 
-- **Texture Resolution**: 
+| Item | Details |
+|---|---|
+| Platform | PC-VRChat |
+| Recommended Unity Version | Unity 2022.3.x |
+| Polygon Count | TBD |
+| Texture Resolution | TBD |
 
 ## Update History
 
-### 💠250503 Menno v1.01
-- **Frying Pan Fix**:
-  • Fixed an issue where the frying pan sound wasn't playing when hitting avatars
-- **Teeth Settings Improvements**:
-  • Corrected duplicate items for "Upper Front Teeth" and "Lower Front Teeth" in the settings menu
-  • Fixed a problem where moving the "Lower Front Teeth" would also move the upper teeth, ensuring independent movement of lower teeth
-- **Nose Settings Fix**:
-  • Enabled the previously non-functional "Front" nose setting option
-- **Technical Fixes**:
-  • Added the missing Anchor override setting for Body_Base
-  • Fixed an issue causing facial flickering in MMD worlds that wasn't resolved by shader adjustments
-- **Eyelash Enhancements**:
-  • Added new eyelash shape keys for greater customization:
-    - EYELASH_OP_Zigzag_Outer: Creates a zigzag pattern eyelash style toward the outer edges
-    - EYELASH_OP_Sharp: Creates a sharper, more defined eyelash appearance
-    - EYELASH_OP_LowerUp: Adjusts lower eyelashes to curve upward
-    - EYELASH_OP_UpperUp: Enhances the upward curve of upper eyelashes
+### 250503 Menno v1.01
+
+- Fixed an issue where tapping the avatar with a frying pan produced no sound.
+- Removed duplicate entries for "Upper Front Teeth" and "Lower Front Teeth" in the teeth settings.
+- Fixed an issue where moving the lower front teeth also moved the upper teeth (lower teeth now move independently).
+- Fixed the "Front" nose setting so it can be used.
+- Fixed a missing Anchor override on Body_Base.
+- Fixed face flickering in the MMD World.
+- Added eyelash shape keys: `EYELASH_OP_ジグザグ外側_Zigzag` (zigzag outward), `EYELASH_OP_シャープ_Sharp` (sharp appearance), `EYELASH_OP_下まつげ上げる_LowerUp` (raise lower lashes), `EYELASH_OP_上まつげ上げる_UpperUp` (raise upper lashes)
 
 ## Support
 
-If you have any issues or questions, please let me know on [X(Twitter)](https://x.com/_emudotto). 
+For questions or bug reports, please contact us on [X (Twitter)](https://x.com/_emudotto).

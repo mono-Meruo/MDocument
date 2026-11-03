@@ -1,40 +1,31 @@
 ---
-title: ⚙️M. Avatar Setting
-parent: Menno
-has_children: true
+title: M. Avatar Setting
 nav_order: 5
-permalink: /menno/mas-settings/
-lang: zh
 ---
 
-# Menno - M. Avatar Setting配置
+# M. Avatar Setting 设置
 
-M. Avatar Setting允许您轻松调整Menno虚拟形象的各种设置。本页说明Menno特定的配置选项。
+使用 M. Avatar Setting 可批量修改 Menno 的面部、头发与物品设置。可从此处跳转至各设置页面。
 
-![M. Avatar Setting UI]({{ site.baseurl }}/assets/images/mas_ui.png)
+![M. Avatar Setting UI](/assets/images/mas_ui.png)
 
-## 什么是M. Avatar Setting？
+## 设置项
 
-M. Avatar Setting是一个用于轻松自定义Menno虚拟形象的工具。您可以使用直观的UI调整面部表情、发色、服装等。
-
-## 配置类别
-
-M. Avatar Setting中为Menno虚拟形象提供以下配置类别：
-
-* [**面部设置**]({{ site.baseurl }}/menno/mas-settings/face/) - 表情和混合形状的调整
-* [**头发设置**]({{ site.baseurl }}/menno/mas-settings/hair/) - 发色和形状的调整
-* [**道具设置**]({{ site.baseurl }}/menno/mas-settings/items/) - 服装和配饰的配置
-
-有关每个配置类别的详细信息，请点击相应的链接。
+| 设置项 | 说明 |
+|---|---|
+| [面部设置](/zh/menno/mas-settings/face/) | 表情与混合形状的调整 |
+| [头发设置](/zh/menno/mas-settings/hair/) | 头发颜色与形状的调整 |
+| [物品设置](/zh/menno/mas-settings/items/) | 服装与配件的设置 |
 
 ## 使用方法
 
-1. 将Menno虚拟形象放置在场景中
-2. 打开M. Avatar Setting窗口（[如何打开的详细信息]({{ site.baseurl }}/avatar-setting/)）
-3. 根据需要展开每个配置类别并调整参数
-4. 设置会自动保存，并将在未来应用
+1. 将 Menno 放置到场景中。
+2. 在 Unity 菜单中打开 `Window > M Avatar Setting`（详见 [M. Avatar Setting](/zh/avatar-setting/)）。
+3. 展开需要修改的设置类别，调整对应数值。
 
-## 注意事项
+设置将自动保存，并在下次启动时应用。
 
-* 设置特定于Menno虚拟形象，不会应用于其他虚拟形象
-* 可能与Emmelie的M. Avatar Setting发生冲突，建议在新项目中导入 
+::: warning 注意
+- 此设置仅适用于 Menno，不适用于其他 Avatar。
+- 由于可能与 Emmelie 的 M. Avatar Setting 发生冲突，建议导入至新建项目中。
+:::

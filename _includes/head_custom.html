@@ -1,3 +1,0 @@
-{%- for lang in site.languages %}
-<link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ site.baseurl }}{% unless lang == site.default_lang %}/{{ lang }}{% endunless %}{{ page.url }}">
-{%- endfor %}

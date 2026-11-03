@@ -1,70 +1,51 @@
 ---
-title: ❓よくある質問（FAQ）
-parent: Menno
+title: よくある質問（FAQ）
 nav_order: 8
-permalink: /menno/faq/
-lang: ja
 ---
 
-# Mennoアバター - よくある質問（FAQ）
+# よくある質問（FAQ）
 
-このページでは、Mennoアバターに関するよくある質問と解決方法をまとめています。
+Mennoで起きやすいトラブルの原因と直し方を確認できます。
 
-## 目次
+## 視線（EyePointer）
 
-1. [EyePointerが正常に動作しない](#eyepointer問題)
-2. [特定の衣装で姿勢がおかしくなる問題](#衣装の問題)
+### Siromori Eye Pointerを入れても目が動かないのはなぜですか？
 
-## EyePointer問題
+[Siromori Eye Pointer](https://booth.pm/ja/items/4742883)の標準アニメーションが、Mennoの `UpperChest` ボーンに対応していないためです。次のどちらかの方法で直せます。
 
-### 症状
-[Siromori Eye Pointer](https://booth.pm/ja/items/4742883)を導入しても目が動かない、または正常に視線誘導が機能しない。
+**M. Avatar Setting v1.2.8以降で直す場合**
 
-### 原因
-Mennoアバターは`UpperChest`ボーンを持っているため、標準のEyePointerアニメーションがこのボーン構造に対応していません。
+1. [Menno_v1.01_M.AvatarSetting_v1.2.8.zip](https://emudotto.booth.pm/items/6504220)をダウンロードします。
+2. インポート画面で `Scripts` フォルダだけにチェックを入れてインポートします。
+3. Unityのメニューから `Window > M Avatar Setting` を開きます。
+4. ウィンドウ最下部のデバッグセクションを展開します。
+5. 「fixEyePointer」ボタンをクリックします。
 
-### 解決方法
+::: warning 注意
+`Scripts` 以外のフォルダもインポートすると、Mennoのテクスチャやマテリアルが上書きされることがあります。
+:::
 
-#### M Avatar Setting v1.2.8以降をお持ちの場合
+**手動で直す場合**
 
-1. [Menno_v1.01_M.AvatarSetting_v1.2.8.zip](https://emudotto.booth.pm/items/6504220)をダウンロードします
-2. **重要**: インポート時にはScriptsフォルダのみをチェックしてください（他のフォルダをインポートするとMennoのテクスチャやマテリアルが上書きされる可能性があります）
-3. Unityエディタ上部のメニューから`Window > M Avatar Setting`を開きます
-4. ウィンドウの一番下のデバッグセクションを展開し、「fixEyePointer」ボタンをクリックします
-5. これによりMennoアバターのUpperChestボーン構造に対応したEyePointerアニメーションが適用されます
+1. 次のアニメーションファイルを開きます。
+   - `Assets/Siromori/EyePointer/Animations/Toggle_Off.anim`
+   - `Assets/Siromori/EyePointer/Animations/Toggle_On.anim`
+   - `Assets/Siromori/EyePointer/Animations/Toggle_On_NoLook.anim`
+2. ファイル内の目のボーンパスすべて（`LeftEye` `RightEye` など）に `UpperChest` を加えます。例: `Armature/Hips/Spine/Chest/Neck/Head/LeftEye` を `Armature/Hips/Spine/Chest/UpperChest/Neck/Head/LeftEye` に変更します。
 
-#### 手動で修正する場合
+## 衣装
 
-EyePointerのアニメーションパスを手動で修正する必要があります：
+### 特定の衣装を着ると、Zボタンでしゃがんだ後に姿勢が戻らないのはなぜですか？
 
-1. 以下のアニメーションファイルを探します:
-   - Assets/Siromori/EyePointer/Animations/Toggle_Off.anim
-   - Assets/Siromori/EyePointer/Animations/Toggle_On.anim
-   - Assets/Siromori/EyePointer/Animations/Toggle_On_NoLook.anim
-2. これらのファイルにある目のボーンパス（`Armature/Hips/Spine/Chest/Neck/Head/LeftEye`など）を
-   `Armature/Hips/Spine/Chest/UpperChest/Neck/Head/LeftEye`のように修正します
+衣装のArmature直下に、Shape Typeが `Plane` でX軸回転が90度のコライダーオブジェクトがあるためです。そのコライダーのX軸回転を `90` から `0` に変更すると直ります。
 
-## 衣装の問題
+確認されている衣装:
 
-### 症状
-特定の衣装を着用すると、Zボタンでしゃがんだ後に姿勢が元に戻らない、または挙動がおかしくなる。
+- Pirouetteさんの「[Arcane Attire](https://booth.pm/ja/items/6151859)」（魔法使い風）: ダウンロードページにある「plusheadのルェルツ_Rwerutu_に着せる方へ.png」の手順に従ってください。
+- ISHTAR LIBERALISさんの「[Theologica](https://booth.pm/ja/items/6350299)」（修道女風）: コライダーのX軸回転を `90` から `0` に変更します。
 
-### 影響する衣装の例
-- Pirouetteさんの「[Arcane Attire](https://booth.pm/ja/items/6151859)」：魔法使い風の衣装セット
-- ISHTAR LIBERALISさんの「[Theologica](https://booth.pm/ja/items/6350299)」：修道女風の衣装セット
+## その他
 
-### 原因
-これらの衣装には、Armature直下にShape TypeがPlaneのコライダーオブジェクトが配置されており、そのオブジェクトのX軸回転が90度に設定されていることが問題を引き起こしています。
+### ここにない質問はどこに問い合わせればいいですか？
 
-### 解決方法
-
-#### 「Arcane Attire」の場合
-1. BOOTHのArcane Attireダウンロードページに含まれる「plusheadのルェルツ_Rwerutu_に着せる方へ.png」の手順に従ってください
-2. 具体的には、コライダーオブジェクトのX軸回転を90度から0度に変更します
-
-#### 「Theologica」の場合
-同様に、衣装のコライダーオブジェクトのX軸回転を確認し、90度から0度に変更することで問題が解決します。
-
-## その他の質問
-
-質問や問題がある場合は、[X(Twitter)](https://x.com/_emudotto)にてご連絡ください。 
+[X(Twitter)](https://x.com/_emudotto)で連絡してください。

@@ -1,27 +1,18 @@
 ---
-title: 🎨Creator Guide
-parent: Menno
+title: Creator Guide
 nav_order: 7
-permalink: /menno/creator-guide/
-lang: en
 ---
 
 # Creator Guide
 
-This guide explains customization and content creation for Menno.
+Verify the allowed meshes and base body when creating Menno's hair and outfits.
 
+## Hair
 
-## 👨‍🦱Hair Creation Guide
+- Only the base mesh for the hair connected to the head is allowed.
+- Meshes and textures other than the base are not allowed.
 
-### Allowed Meshes and Textures
-- Base hair meshes that connect to the head
+## Outfits and Base Body
 
-### Notes
-- Using meshes or textures other than the base hair is not permitted
-
-### 👕Costume Creation Guide
-You can create costumes that match the Body_Base model
-
-### 🧍About the Base Body
-
-Menno uses the [+Head (Legacy System Works) common base body](https://booth.pm/ja/items/5153266), but using the Body_Base model included with Menno is also permitted. 
+- You can create outfits that match the `Body_Base` model.
+- Menno uses the [common base body for +Head (Legacy System Works)](https://booth.pm/ja/items/5153266). Using the `Body_Base` model included with Menno is also permitted.

@@ -1,36 +1,36 @@
 ---
 title: アニメーション構造
-parent: Menno
 nav_order: 4
-permalink: /menno/animation/
-lang: ja
 ---
 
-# Menno - アニメーション構造
+# アニメーション構造
 
-## アニメーションフォルダ構造
+Mennoのアニメーションファイル、コントローラー、パラメーターの名前と場所を確認できます。表情やアイテムを改変するときの参照に使ってください。
 
-Mennoのアニメーション関連ファイルは、以下のフォルダに整理されています：
+## フォルダ構成
 
-```
-Assets/emudotto/Menno/Animation/
-├── AnimaitonLayer/ - アニメーションコントローラー
-├── FX_Body/ - 体のアニメーション
-├── FX_Face/ - 表情アニメーション
-├── FX_ToggleProp/ - トグルアイテムアニメーション
-├── Gesture/ - ジェスチャーアニメーション
-├── Locomotion/ - 移動アニメーション
-├── ModularAvatar/ - ModularAvatar拡張
-└── Parameters/ - VRChatSDKのメニューとパラメーター設定
-```
+ファイルはすべて `Assets/emudotto/Menno/Animation/` にあります。
+
+| フォルダ | 内容 |
+|---|---|
+| `AnimaitonLayer/` | アニメーションコントローラー |
+| `FX_Body/` | 体のアニメーション |
+| `FX_Face/` | 表情アニメーション |
+| `FX_ToggleProp/` | トグルアイテムのアニメーション |
+| `Gesture/` | ジェスチャーアニメーション |
+| `Locomotion/` | 移動アニメーション |
+| `ModularAvatar/` | Modular Avatar拡張 |
+| `Parameters/` | VRChat SDKのメニューとパラメーター |
 
 ## アニメーションコントローラー
 
-### Menno_Layer_FX.controller
+| コントローラー | 役割 |
+|---|---|
+| `AnimaitonLayer/Menno_Layer_FX.controller` | メインのFXコントローラー。表情・ボディライティング・トグルアイテムを管理 |
+| `AnimaitonLayer/Menno_Layer_Gesture.controller` | 手のジェスチャー |
+| `Menno_Props.controller` / `Menno_Props_Gesture.controller` | アイテムのトグルと関連するジェスチャー。アップロード時にModular AvatarがFXレイヤーへ統合 |
 
-Mennoアバターのメインアニメーションコントローラーは`AnimaitonLayer/Menno_Layer_FX.controller`です。このコントローラーは表情、ボディライティング、トグルアイテムなどを管理します。
-
-FXコントローラーの主な構造は以下のようになっています：
+`Menno_Layer_FX.controller` の構成は次のとおりです。
 
 ```
 Menno_Layer_FX.controller
@@ -48,83 +48,70 @@ Menno_Layer_FX.controller
     └── Mokia_OFF / Mokia_ON
 ```
 
-### Menno_Layer_Gesture.controller
+## 表情アニメーション（FX_Face）
 
-`AnimaitonLayer/Menno_Layer_Gesture.controller`は、手のジェスチャーを制御します。
+主な表情です。このほかにも多くの表情があり、Expression Menuから選べます。
 
-### Menno_Props.controller & Menno_Props_Gesture.controller
+| アニメーション名 | 表情 |
+|---|---|
+| `Menno_初期状態_Base` | 初期状態 |
+| `Menno_笑顔_Smile` | 笑顔 |
+| `Menno_悲しみ_Sad` | 悲しい |
+| `Menno_怒り_Angry` | 怒り |
+| `Menno_驚愕_surprise` | 驚き |
+| `Menno_泣く_Cry` | 泣き |
+| `Menno_ハート_Heart` | 目がハート形 |
+| `Menno_舌出し_Tongue` | 舌を出す |
+| `Menno_和み_Calm` | リラックス |
+| `Menno_目閉じ_Sleep` | 目を閉じる |
+| `Menno_冷え_Cold` | 寒そう |
+| `Menno_焦り_Impatience` | 焦り |
 
-これらのコントローラーは、アイテムのトグル操作と関連するジェスチャーを制御します。
-Modular Avatarによりアップロード後、FXレイヤーと統合されます。
+## ボディアニメーション（FX_Body）
 
-## 表情アニメーション (FX_Face)
+| アニメーション名 | 内容 |
+|---|---|
+| `Menno_Body_Lighting` | 体のライティング調整 |
+| `Menno_Body_Cheek` | PhysBoneで頬が引っ張られる |
+| `Menno_Body_Cheek_L` | PhysBoneで左頬が引っ張られる |
+| `Menno_Body_Cheek_R` | PhysBoneで右頬が引っ張られる |
 
-デフォルトのMennoアバターは、以下のような表情アニメーションを持っています：
+## メニューとパラメーター（Parameters）
 
-| アニメーション名 | 説明 |
-|--------------|------|
-| Menno_初期状態_Base | 初期状態 |
-| Menno_笑顔_Smile | 笑顔 |
-| Menno_悲しみ_Sad | 悲しい表情 |
-| Menno_怒り_Angry | 怒った表情 |
-| Menno_驚愕_surprise | 驚いた表情 |
-| Menno_泣く_Cry | 泣いている表情 |
-| Menno_ハート_Heart | 目がハート形になる表情 |
-| Menno_舌出し_Tongue | 舌を出す表情 |
-| Menno_和み_Calm | リラックスした表情 |
-| Menno_目閉じ_Sleep | 目を閉じた表情 |
-| Menno_冷え_Cold | 寒そうな表情 |
-| Menno_焦り_Impatience | 焦った表情 |
+| ファイル | 内容 |
+|---|---|
+| `Menno_ExpressionParameters.asset` | 基本パラメーター |
+| `Menno_ExpressionsMenu.asset` | メインメニュー |
+| `Menno_FaceMenu.asset` | 表情メニュー |
+| `Menno_FaceMenu1.asset` / `Menno_FaceMenu2.asset` / `Menno_FaceMenu3.asset` | 追加の表情メニュー |
+| `Menno_Props.asset` / `Menno_Props_SubMenu.asset` | アイテムメニュー |
 
-その他多数の表情が用意されており、ExpressionMenuから選択できます。
+### 主なパラメーター
 
-## ボディアニメーション (FX_Body)
+| パラメーター名 | タイプ | 内容 |
+|---|---|---|
+| `VRCFaceBlendH` | Float | 水平方向の表情ブレンド（VRChat標準） |
+| `VRCFaceBlendV` | Float | 垂直方向の表情ブレンド（VRChat標準） |
+| `GestureLeft` | Int | 左手のジェスチャー（VRChat標準） |
+| `GestureRight` | Int | 右手のジェスチャー（VRChat標準） |
+| `GestureLeftWeight` | Float | 左手のジェスチャーの強さ（VRChat標準） |
+| `GestureRightWeight` | Float | 右手のジェスチャーの強さ（VRChat標準） |
+| `FacialExpression` | Int | 表情の選択 |
+| `BodyLighting` | Float | 体のライティング調整 |
+| `Cheek` | Bool | 頬の引っ張りON/OFF |
+| `CheekLeft` | Bool | 左頬の引っ張りON/OFF |
+| `CheekRight` | Bool | 右頬の引っ張りON/OFF |
+| `TogglePan` | Bool | フライパンの表示/非表示 |
+| `ToggleXondle` | Bool | Xondle・Xontraの表示/非表示 |
+| `ToggleMokia` | Bool | 携帯電話の表示/非表示 |
 
-体のアニメーションには以下のようなものがあります：
+## 表情の切り替え方
 
-- **Menno_Body_Lighting** - 体のライティング調整
-- **Menno_Body_Cheek** - PhysBoneによって頬が引っ張られます
-- **Menno_Body_Cheek_L** - PhysBoneによって左頬が引っ張られます
-- **Menno_Body_Cheek_R** - PhysBoneによって右頬が引っ張られます
+1. VRChatでアクションメニューを開きます（PCは `R` キー、VRはアクションメニューボタン）。
+2. Mennoのメニューから「表情」を開きます。
+3. 使いたい表情を選びます。
 
-## パラメーター設定 (Parameters)
-
-Mennoアバターでは、以下のExpressionMenuとParametersが使用されています：
-
-- **Menno_ExpressionParameters.asset** - 基本パラメーター設定
-- **Menno_ExpressionsMenu.asset** - メインメニュー
-- **Menno_FaceMenu.asset** - 表情メニュー
-- **Menno_FaceMenu1.asset**, **Menno_FaceMenu2.asset**, **Menno_FaceMenu3.asset** - 追加表情メニュー
-- **Menno_Props.asset**, **Menno_Props_SubMenu.asset** - アイテムメニュー
-
-### 主要パラメーター一覧
-
-| パラメーター名 | タイプ | 説明 |
-|--------------|------|------|
-| VRCFaceBlendH | Float | 水平方向の表情ブレンド（VRChat標準） |
-| VRCFaceBlendV | Float | 垂直方向の表情ブレンド（VRChat標準） |
-| GestureLeft | Int | 左手のジェスチャー（VRChat標準） |
-| GestureRight | Int | 右手のジェスチャー（VRChat標準） |
-| GestureLeftWeight | Float | 左手のジェスチャーの強さ（VRChat標準）  |
-| GestureRightWeight | Float | 右手のジェスチャーの強さ（VRChat標準）  |
-| FacialExpression | Int | 表情の選択 |
-| BodyLighting | Float | 体のライティング調整 |
-| Cheek | Bool | 頬のひっぱりON/OFF |
-| CheekLeft | Bool | 左頬のひっぱりON/OFF |
-| CheekRight | Bool | 左頬のひっぱりON/OFF |
-| TogglePan | Bool | フライパンの表示/非表示 |
-| ToggleXondle | Bool | Xondle・Xontraの表示/非表示 |
-| ToggleMokia | Bool | 携帯電話の表示/非表示 |
-
-## 表情の使い方
-
-Mennoアバターの表情は以下の方法で使用できます：
-
-### 1. アクションメニューから選択
-
-VRChatのアクションメニュー（PCではRキー、VRではアクションメニューボタン）を開き、Mennoの表情メニューから表情を選択します。
-
-表情メニューは以下のように階層化されています：
+メニューの階層は次のとおりです。
 
 ```
 メインメニュー

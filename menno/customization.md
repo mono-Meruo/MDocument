@@ -1,104 +1,65 @@
 ---
 title: 改変方法
-parent: Menno
 nav_order: 2
-permalink: /menno/customization/
-lang: ja
 ---
 
-# Menno - 改変方法
+# 改変方法
 
-このページでは、Mennoアバターの改変方法について説明します。
+Menno のテクスチャやマテリアルの変更、衣装の追加、アニメーションや表情の編集ができます。
 
-## テクスチャの改変
+::: warning 注意
+大きく改変する前に、元のファイルをバックアップしてください。
+:::
 
-### 1. テクスチャファイルの場所
+## ファイルの場所
 
-Mennoの主要なテクスチャファイルは以下の場所に保存されています：
+| 対象 | 場所 |
+|---|---|
+| テクスチャ（PSD） | `Assets/emudotto/Menno/Materials/Tex_Main/` |
+| マテリアル | `Assets/emudotto/Menno/Materials/` |
+| アニメーション | `Assets/emudotto/Menno/Animation/` |
 
-```
-Assets/emudotto/Menno/Materials/Tex_Main/
-```
+## テクスチャを変更する
 
-### 2. テクスチャの編集
+1. `Tex_Main` の PSD を Photoshop や GIMP などで開きます。
+2. 編集して保存します。
+3. Unity に戻ります。変更は自動で反映されます。
 
-1. テクスチャファイル(PSD)をPhotoshopやGimpなどの画像編集ソフトで開く
-2. 必要な編集を行い保存
-3. Unityプロジェクトに戻ると、変更が自動的に反映されます
+## マテリアルを変更する
 
+1. Project ウィンドウでマテリアルを選択します（Hierarchy でオブジェクトを選んでも構いません）。
+2. Inspector で lilToon のパラメータを調整します。詳しくは [lilToon のドキュメント](https://lilxyzw.github.io/lilToon/ja_JP/first.html) を参照してください。
 
-## マテリアルの改変
+## 衣装を追加する
 
-### 1. マテリアルの場所
+Modular Avatar を使って追加します。
 
-Mennoのマテリアルは以下の場所に保存されています：
+1. 衣装の unitypackage をダブルクリックして Unity にインポートします。
+2. 衣装を Menno の子オブジェクトとして配置します。
+3. 衣装オブジェクトを右クリックし、`[ModularAvatar] Setup Outfit` を選びます。
 
-```
-Assets/emudotto/Menno/Materials/
-```
+Modular Avatar が衣装のアーマチュアを検出して Merge Armature コンポーネントを追加し、衣装が Menno のボーンに追従するようになります。
 
-### 2. マテリアルの編集
+### Expression Menu で切り替えられるようにする
 
-1. プロジェクトウィンドウ、またはヒエラルキーのオブジェクト選択でマテリアルファイルを選択
-2. インスペクタウィンドウで[Liltoonマテリアルのパラメータを調整](https://lilxyzw.github.io/lilToon/ja_JP/first.html)
+1. 衣装オブジェクトを選択します。
+2. 「Add Component」から `MA Toggle Object` を追加します。
+3. 「デフォルト状態」をオンまたはオフに設定します。
+4. 「メニュー項目名」に表示名を入力します。
+5. 必要に応じてアイコンやメニュー階層を設定します。
 
+## アニメーションを編集する
 
-## 衣装の追加
+1. Project ウィンドウでアニメーションファイルを選択します。
+2. Animation ウィンドウを開きます。
+3. キーフレームを追加・編集します。
+4. 保存します。
 
-### 1. 新しい衣装の作成
+## 表情を追加する
 
-1. 衣装を作成または衣装を購入
-2. Unitypackageをクリックし、Unityにインポート
+1. シーンで Menno を選択します。
+2. Body メッシュの Skinned Mesh Renderer を選択します。
+3. Inspector の「Blend Shapes」で表情を調整します。
+4. Animation ウィンドウで、調整した表情をキーフレームとして記録します。
 
-### 2. ModularAvatarを使った衣装の追加
-
-Modular Avatarを使用すると、新しい衣装を簡単にMennoアバターに追加できます。
-
-#### 2.1 簡単な衣装のセットアップ
-
-1. 新しい衣装モデルをMennoの子オブジェクトとして配置します
-2. 衣装オブジェクトを右クリックし、`[ModularAvatar] Setup Outfit`を選択します
-   - Modular Avatarが自動的に衣装のアーマチュアを検出し、Merge Armatureコンポーネントを追加します
-3. これで衣装が自動的にMennoアバターのボーンに追従するようになります
-
-#### 2.2 衣装のトグル設定
-
-Expression Menuから衣装を切り替えられるようにするには：
-
-1. 衣装オブジェクトを選択
-2. Add ComponentからMA Toggle Objectコンポーネントを追加
-3. 「デフォルト状態」を設定（オンまたはオフ）
-4. 「メニュー項目名」に表示したい名前を入力
-5. 必要に応じて、アイコンやメニュー階層を設定
-
-これらの設定が完了すると、Mennoアバターに新しい衣装が適切に追加され、Expression Menuから切り替えられるようになります。
-
-## アニメーションの変更
-
-### 1. アニメーションファイルの場所
-
-Mennoのアニメーションファイルは以下の場所に保存されています：
-
-```
-Assets/emudotto/Menno/Animation/
-```
-
-### 2. アニメーションの編集
-
-1. プロジェクトウィンドウでアニメーションファイルを選択
-2. Animation Windowを開く
-3. キーフレームを追加・編集
-4. 変更を保存
-
-## 表情の追加
-
-### 1. ブレンドシェイプの使用
-
-1. シーンでMennoアバターを選択
-2. Bodyメッシュのスキンメッシュレンダラーを選択
-3. インスペクタのBlend Shapesセクションで表情を調整
-4. Animationウィンドウで調整した表情をキーフレームとして記録
-
-## 注意事項
-
-* 大幅な改変を行う場合は、元のファイルのバックアップを作成してください
+使えるシェイプキーは [シェイプキー](/menno/shapekeys/) で確認できます。

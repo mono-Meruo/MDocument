@@ -1,121 +1,64 @@
 ---
 title: MTear 泪水编辑器
-parent: ⚙️M. Avatar Setting
 nav_order: 3
-lang: zh
-permalink: /avatar-setting/mtear/
 ---
 
-# MTear 泪水编辑器
+# MTear泪编辑器
 
-MTear 是一个为 VRChat 虚拟形象"Menno"设计的泪水效果编辑工具。您可以自由自定义泪水流动的速度、形状和大小等。
+使用 MTear 可调节 Menno 泪水的形状、大小与流速。本节介绍了泪水 Mesh 的编辑方法与 Shader 设置参数。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rcjnlMPjgCc?si=4v3UXY1mBSb9ByJN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [概述](#概述)
-- [使用方法](#使用方法)
-- [泪水网格编辑器](#泪水网格编辑器)
-- [着色器设置](#着色器设置)
-- [预设](#预设)
-- [应用示例](#应用示例)
+## 组件结构
 
-## 概述
+| 组件名称 | 说明 |
+|------|------|
+| MTearEditor | 附加在 Avatar 上的组件 |
+| MTearEditorWindow | 用于编辑泪水 Mesh 的窗口 |
+| Menno_Tear | 泪水使用的 Shader |
+| MennoTearEditor | Shader 的自定义 Inspector |
 
-MTear 由以下组件组成：
+## 编辑泪水 Mesh
 
-1. **MTearEditor** - 附加到虚拟形象的组件
-2. **MTearEditorWindow** - 编辑泪水网格的窗口
-3. **Menno_Tear** - 泪水着色器
-4. **MennoTearEditor** - 着色器的自定义检查器
+1. 打开 Menno Avatar。
+2. 在 Hierarchy 面板中展开「Menno」对象。
+3. 选择「MTear」对象。
+4. 在 Inspector 中点击「编辑泪水 Mesh」按钮。
+5. 在弹出的窗口（MTearEditorWindow）中，于「编辑对象」处选择包含泪水 Mesh 的对象。
+6. 在 Scene 视图中点击蓝色或红色的球体（骨骼）。
+7. 使用显示的手柄进行移动与旋转操作。
 
-通过组合这些组件，您可以从泪水的形状到外观进行细致调整。
+- 蓝色和红色分别代表左侧和右侧骨骼。移动任意一侧时，另一侧将自动镜像同步。
+- 位置、旋转与缩放均可在 Inspector 中直接输入数值调整。
+- 编辑期间会自动切换至视图工具，退出后将恢复为之前的工具状态。
 
-## 使用方法
+## Shader 设置
 
-### 基本设置
+通过 Menno_Tear Shader 调整泪水的外观表现。
 
-1. 打开 Menno 虚拟形象
-2. 如果没有 MTear 组件，请将其添加到"MTear"对象
-3. 在检查器中选择 MTearEditor 组件
-4. 点击"编辑泪水网格"按钮
-
-
-### 从检查器编辑
-
-MTearEditor 显示用于编辑泪水网格的按钮。
-点击按钮将打开专用的编辑器窗口。
-
-## 泪水网格编辑器
-
-MTearEditorWindow 是一个用于编辑泪水网格形状的专用窗口。
-
-
-### 主要功能
-
-- **编辑目标对象**: 选择包含泪水网格的对象
-- **自动镜像**: 对称编辑左右骨骼
-- **颜色区分显示**: 用蓝色和红色区分左右骨骼
-- **3D 操作**: 在场景视图中直接移动和旋转骨骼
-
-### 骨骼操作方法
-
-1. 在场景视图中点击蓝色或红色球体（骨骼）进行选择
-2. 选中的骨骼会显示手柄，可以进行移动和旋转
-3. 左右对称的骨骼会自动镜像
-4. 也可以在检查器中通过数值调整位置、旋转和缩放
-
-注意：工具会自动切换到查看工具，但编辑结束后会返回到原来的工具。
-
-## 着色器设置
-
-MTear 使用专用的"Menno_Tear"着色器。这个着色器有许多参数，可以调整泪水的外观。
-
-
-### 基本设置
-
-- **泪水速度** (_Speed): 调整泪水流动的速度
-- **泪水位置** (_Tear_position): 调整泪水的左右位置
-
-### 泪水积聚设置
-
-- **泪水积聚强度** (_Tear_Puddle_intensity): 调整眼睛内泪水积聚的大小
-
-### 泪滴设置
-
-- **泪滴强度** (_Tear_Drop_intensity): 流过脸颊的泪水强度
-- **泪滴大小** (_Tear_Drop_Size): 泪滴的大小
-- **额外泪滴强度** (_Tear_Drop_extra_intensity): 次要泪滴的强度
-- **额外泪滴大小** (_Tear_Drop_extra_Size): 次要泪滴的大小
-
-### 视觉效果
-
-- **高光发光** (_Tear_Specular_Emissive): 泪水光泽的发光强度
-- **高光强度** (_Tear_Specular_Strength): 泪水光泽的强度
-- **轮廓** (_Tear_Outline): 泪水轮廓的强度
-- **轮廓颜色** (_Tear_Outline_Color): 泪水轮廓的颜色
-- **扭曲** (_Tear_Distortion): 泪水引起的背景扭曲程度
-
-### 光照设置
-
-- **最小光照** (_LightMinLimit): 暗环境中的最小亮度
-- **最大光照** (_LightMaxLimit): 明亮环境中的最大亮度
+| 参数项 | Shader 变量名 | 说明 |
+|------|-------------|------|
+| 泪水流速 | `_Speed` | 泪水的流动速率 |
+| 泪水位置 | `_Tear_position` | 泪水的左右偏移量 |
+| 泪池强度 | `_Tear_Puddle_intensity` | 眼窝内泪池的大小 |
+| 泪滴强度 | `_Tear_Drop_intensity` | 脸颊流下泪水的视觉强度 |
+| 泪滴尺寸 | `_Tear_Drop_Size` | 泪滴的大小 |
+| 附加泪滴强度 | `_Tear_Drop_extra_intensity` | 次要泪滴的视觉强度 |
+| 附加泪滴尺寸 | `_Tear_Drop_extra_Size` | 次要泪滴的大小 |
+| 高光自发光 | `_Tear_Specular_Emissive` | 光泽部分的自发光强度 |
+| 高光强度 | `_Tear_Specular_Strength` | 光泽的强度 |
+| 描边强度 | `_Tear_Outline` | 边缘描边的强度 |
+| 描边颜色 | `_Tear_Outline_Color` | 边缘描边的颜色 |
+| 扭曲程度 | `_Tear_Distortion` | 背景的折射扭曲程度 |
+| 最低光照限制 | `_LightMinLimit` | 暗处环境下的最小亮度保底值 |
+| 最高光照限制 | `_LightMaxLimit` | 亮处环境下的最大亮度上限值 |
 
 ## 预设
 
-MTear 着色器提供了三种标准预设：
+通过 Shader 设置面板底部的按钮应用预设。您也可以将自己的参数保存为自定义预设。
 
-- **标准 (Default)**: 平衡的标准泪水
-- **小型 (Small)**: 小而微妙的泪水
-- **大型 (Big)**: 大而明显的泪水
-
-您可以从着色器编辑器底部的按钮应用预设。您也可以将自己喜欢的设置保存为预设。
-
-## 应用示例
-
-- **与悲伤表情结合**: 与哭泣表情一起使用增强情感表达
-- **更改泪水颜色**: 通过轮廓颜色和发光设置表达奇幻风格的泪水
-- **不同泪水大小**: 根据情况使用不同大小的泪水
-
----
-
-*本文档会定期更新。最后更新：2025年5月* 
+| 预设名称 | 说明 |
+|------|------|
+| 标准 (Default) | 平衡且自然的泪水表现 |
+| 小 (Small) | 小巧且低调的泪水效果 |
+| 大 (Big) | 宏大且醒目的泪水效果 |

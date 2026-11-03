@@ -1,130 +1,117 @@
 ---
 title: Animation Structure
-parent: Menno
 nav_order: 4
-permalink: /menno/animation/
-lang: en
 ---
 
-# Menno - Animation Structure
+# Animation Structure
 
-## Animation Folder Structure
+View the names and locations of Menno's animation files, controllers, and parameters. Use this as a reference when modifying expressions or items.
 
-The animation-related files for Menno are organized in the following folders:
+## Folder Structure
 
-```
-Assets/emudotto/Menno/Animation/
-├── AnimaitonLayer/ - Animation controllers
-├── FX_Body/ - Body animations
-├── FX_Face/ - Facial expressions
-├── FX_ToggleProp/ - Toggle item animations
-├── Gesture/ - Gesture animations
-├── Locomotion/ - Movement animations
-├── ModularAvatar/ - ModularAvatar extensions
-└── Parameters/ - VRChat SDK menu and parameter settings
-```
+All files are located in `Assets/emudotto/Menno/Animation/`.
+
+| Folder | Contents |
+|---|---|
+| `AnimaitonLayer/` | Animation controllers |
+| `FX_Body/` | Body animations |
+| `FX_Face/` | Expression animations |
+| `FX_ToggleProp/` | Toggle item animations |
+| `Gesture/` | Gesture animations |
+| `Locomotion/` | Locomotion animations |
+| `ModularAvatar/` | Modular Avatar extensions |
+| `Parameters/` | VRChat SDK menus and parameters |
 
 ## Animation Controllers
 
-### Menno_Layer_FX.controller
+| Controller | Role |
+|---|---|
+| `AnimaitonLayer/Menno_Layer_FX.controller` | Main FX controller. Manages expressions, body lighting, and toggle items. |
+| `AnimaitonLayer/Menno_Layer_Gesture.controller` | Hand gestures |
+| `Menno_Props.controller` / `Menno_Props_Gesture.controller` | Item toggles and related gestures. Modular Avatar integrates them into the FX layer upon upload. |
 
-The main animation controller for the Menno avatar is `AnimaitonLayer/Menno_Layer_FX.controller`. This controller manages expressions, body lighting, toggle items, and more.
-
-The main structure of the FX controller is as follows:
+The structure of `Menno_Layer_FX.controller` is as follows:
 
 ```
 Menno_Layer_FX.controller
-├── Expression state machine
-│   ├── Base
-│   ├── Smile
-│   ├── Sad
+├── Expression State Machine
+│   ├── Idle_State_Base
+│   ├── Smile_Smile
+│   ├── Sad_Sad
 │   └── Other expressions...
-├── Body lighting state machine
+├── Body Lighting State Machine
 │   ├── Lighting_OFF
 │   └── Lighting_ON
-└── Toggle item state machine
+└── Toggle Item State Machine
     ├── Pan_OFF / Pan_ON
     ├── Xondle_OFF / Xondle_ON
     └── Mokia_OFF / Mokia_ON
 ```
 
-### Menno_Layer_Gesture.controller
+## Expression Animations (FX_Face)
 
-`AnimaitonLayer/Menno_Layer_Gesture.controller` controls hand gestures.
+These are the primary expressions. Additional expressions are also available and can be selected from the Expression Menu.
 
-### Menno_Props.controller & Menno_Props_Gesture.controller
-
-These controllers manage toggle operations for items and related gestures.
-They are integrated with the FX layer after upload via Modular Avatar.
-
-## Facial Expressions (FX_Face)
-
-The default Menno avatar includes the following facial expressions:
-
-| Animation Name | Description |
-|--------------|------|
-| Menno_Base | Default state |
-| Menno_Smile | Smiling expression |
-| Menno_Sad | Sad expression |
-| Menno_Angry | Angry expression |
-| Menno_Surprise | Surprised expression |
-| Menno_Cry | Crying expression |
-| Menno_Heart | Eyes in heart shape |
-| Menno_Tongue | Sticking out tongue |
-| Menno_Calm | Relaxed expression |
-| Menno_Sleep | Closed eyes |
-| Menno_Cold | Cold expression |
-| Menno_Impatience | Impatient expression |
-
-Many other expressions are available and can be selected from the Expression Menu.
+| Animation name | Expression |
+|---|---|
+| `Menno_初期状態_Base` | Idle / Initial State |
+| `Menno_笑顔_Smile` | Smile |
+| `Menno_悲しみ_Sad` | Sad |
+| `Menno_怒り_Angry` | Angry |
+| `Menno_驚愕_surprise` | Surprise |
+| `Menno_泣く_Cry` | Crying |
+| `Menno_ハート_Heart` | Heart Eyes |
+| `Menno_舌出し_Tongue` | Tongue Out |
+| `Menno_和み_Calm` | Relaxed / Calm |
+| `Menno_目閉じ_Sleep` | Eyes Closed |
+| `Menno_冷え_Cold` | Cold / Shivering |
+| `Menno_焦り_Impatience` | Impatient |
 
 ## Body Animations (FX_Body)
 
-Body animations include:
+| Animation name | Contents |
+|---|---|
+| `Menno_Body_Lighting` | Body lighting adjustment |
+| `Menno_Body_Cheek` | Cheek pulled by PhysBone |
+| `Menno_Body_Cheek_L` | Left cheek pulled by PhysBone |
+| `Menno_Body_Cheek_R` | Right cheek pulled by PhysBone |
 
-- **Menno_Body_Lighting** - Body lighting adjustment
-- **Menno_Body_Cheek** - Cheeks that can be pulled using PhysBones
-- **Menno_Body_Cheek_L** - Left cheek that can be pulled using PhysBones
-- **Menno_Body_Cheek_R** - Right cheek that can be pulled using PhysBones
+## Menus and Parameters (Parameters)
 
-## Parameter Settings (Parameters)
+| ファイル | 内容 |
+|---|---|
+| `Menno_ExpressionParameters.asset` | Base parameters |
+| `Menno_ExpressionsMenu.asset` | Main menu |
+| `Menno_FaceMenu.asset` | Expression menu |
+| `Menno_FaceMenu1.asset` / `Menno_FaceMenu2.asset` / `Menno_FaceMenu3.asset` | Additional expression menus |
+| `Menno_Props.asset` / `Menno_Props_SubMenu.asset` | Item menu |
 
-The Menno avatar uses the following Expression Menus and Parameters:
+### Primary Parameters
 
-- **Menno_ExpressionParameters.asset** - Basic parameter settings
-- **Menno_ExpressionsMenu.asset** - Main menu
-- **Menno_FaceMenu.asset** - Expression menu
-- **Menno_FaceMenu1.asset**, **Menno_FaceMenu2.asset**, **Menno_FaceMenu3.asset** - Additional expression menus
-- **Menno_Props.asset**, **Menno_Props_SubMenu.asset** - Item menus
+| パラメーター名 | タイプ | 内容 |
+|---|---|---|
+| `VRCFaceBlendH` | Float | Horizontal facial blend (VRChat standard) |
+| `VRCFaceBlendV` | Float | Vertical facial blend (VRChat standard) |
+| `GestureLeft` | Int | Left hand gesture (VRChat standard) |
+| `GestureRight` | Int | Right hand gesture (VRChat standard) |
+| `GestureLeftWeight` | Float | Left hand gesture weight (VRChat standard) |
+| `GestureRightWeight` | Float | Right hand gesture weight (VRChat standard) |
+| `FacialExpression` | Int | Expression selection |
+| `BodyLighting` | Float | Body lighting adjustment |
+| `Cheek` | Bool | Cheek pull ON/OFF |
+| `CheekLeft` | Bool | Left cheek pull ON/OFF |
+| `CheekRight` | Bool | Right cheek pull ON/OFF |
+| `TogglePan` | Bool | Toggle pan display |
+| `ToggleXondle` | Bool | Toggle Xondle/Xontra display |
+| `ToggleMokia` | Bool | Toggle phone display |
 
-### Main Parameter List
+## Switching Expressions
 
-| Parameter Name | Type | Description |
-|--------------|------|------|
-| VRCFaceBlendH | Float | Horizontal expression blend (VRChat standard) |
-| VRCFaceBlendV | Float | Vertical expression blend (VRChat standard) |
-| GestureLeft | Int | Left hand gesture (VRChat standard) |
-| GestureRight | Int | Right hand gesture (VRChat standard) |
-| GestureLeftWeight | Float | Left hand gesture strength (VRChat standard) |
-| GestureRightWeight | Float | Right hand gesture strength (VRChat standard) |
-| FacialExpression | Int | Expression selection |
-| BodyLighting | Float | Body lighting adjustment |
-| Cheek | Bool | Cheek pull ON/OFF |
-| CheekLeft | Bool | Left cheek pull ON/OFF |
-| CheekRight | Bool | Right cheek pull ON/OFF |
-| TogglePan | Bool | Frying pan display/hide |
-| ToggleXondle | Bool | Xondle/Xontra display/hide |
-| ToggleMokia | Bool | Mobile phone display/hide |
+1. Open the Action Menu in VRChat (press `R` on PC, or the Action Menu button on VR).
+2. Open "Expressions" from the Menno menu.
+3. Select the desired expression.
 
-## How to Use Expressions
-
-The expressions for the Menno avatar can be used in the following ways:
-
-### 1. Selection from the Action Menu
-
-Open the VRChat action menu (R key on PC, Action Menu button in VR) and select expressions from the Menno expression menu.
-
-The expression menu is hierarchically organized as follows:
+The menu hierarchy is as follows:
 
 ```
 Main Menu
@@ -135,14 +122,14 @@ Main Menu
 │   │   └── ...
 │   ├── Special Expressions
 │   │   ├── Heart Eyes
-│   │   ├── Flaming Eyes
+│   │   ├── Burning Eyes
 │   │   └── ...
 │   └── Emotional Expressions
 │       ├── Impatience
 │       ├── Cold
 │       └── ...
 └── Items
-    ├── Frying Pan
+    ├── Pan
     ├── Xondle
     └── Mokia
-``` 
+```

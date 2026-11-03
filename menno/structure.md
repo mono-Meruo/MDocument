@@ -1,18 +1,13 @@
 ---
 title: 構造説明
-parent: Menno
 nav_order: 3
-permalink: /menno/structure/
-lang: ja
 ---
 
-# Menno - 構造説明
+# 構造説明
 
-このページでは、Mennoアバターのフォルダ構造とファイル構成について説明します。
+Menno のファイルの置き場所と、プレハブの中身を確認できます。
 
-## フォルダ構造
-
-Mennoアバターのファイルは以下のフォルダ構造で組織されています：
+## フォルダ構成
 
 ```
 Assets/emudotto/Menno/
@@ -32,20 +27,18 @@ Assets/emudotto/Menno/
 └── MennoScene.unity      # シーン
 ```
 
-## 主要ファイルの説明
+## Menno.prefab
 
-### Menno.prefab
+アバター本体のプレハブです。シーンにドラッグ＆ドロップして使います。
 
-Mennoアバターのメインプレハブファイルです。このファイルをシーンにドラッグ＆ドロップすることでアバターを使用できます。以下の主要なコンポーネントが含まれています：
+| コンポーネント | 役割 |
+|---|---|
+| VRC Avatar Descriptor | VRChat アバターの設定 |
+| M Avatar Setup Helper | M. Avatar Setting との連携 |
+| Animator | アニメーションの制御 |
+| Modular Avatar コンポーネント群 | アバターのカスタマイズ |
 
-- VRC Avatar Descriptor - VRChatアバターの設定
-- M Avatar Setup Helper - M. Avatar Settingとの連携
-- Animator - アニメーションの制御
-- Modular Avatar コンポーネント群 - アバターのカスタマイズ
-
-### アバターの階層構造
-
-Mennoプレハブの階層構造は以下のようになっています：
+## プレハブの階層
 
 ```
 Menno (ルートオブジェクト)
@@ -67,6 +60,6 @@ Menno (ルートオブジェクト)
 └── ToggleProps       # トグルアイテム用オブジェクト
 ```
 
-## カスタマイズ時の注意点
-
-- マテリアルやテクスチャを変更する場合は、元のファイルのバックアップを作成することをおすすめします
+::: tip
+マテリアルやテクスチャを変更する前に、元のファイルをバックアップしておくと安心です。変更方法は[改変方法](/menno/customization/)を参照してください。
+:::

@@ -1,26 +1,18 @@
 ---
-title: 🎨创作者指南
-parent: Menno
+title: 创作者指南
 nav_order: 7
-permalink: /menno/creator-guide/
-lang: zh
 ---
 
 # 创作者指南
 
-本指南说明Menno的自定义和内容创作。
+制作 Menno 的头发或服装时，可查阅允许的网格与基础模型。
 
-## 👨‍🦱头发创作指南
+## 头发
 
-### 允许的网格和纹理
-- 连接到头部的基发网格
+- 仅允许使用与头部相连的头发底层网格。
+- 不得使用底层网格以外的网格或纹理。
 
-### 注意事项
-- 不允许使用基发以外的网格或纹理
+## 服装与基础模型
 
-### 👕服装创作指南
-您可以创建与Body_Base模型匹配的服装
-
-### 🧍关于基础身体
-
-Menno使用[+Head (Legacy System Works)通用基础身体](https://booth.pm/ja/items/5153266)，但使用Menno附带的Body_Base模型也是允许的。 
+- 可制作与 `Body_Base` 基础模型配套的服装。
+- Menno 使用 [+Head（Legacy System Works）的通用基础模型](https://booth.pm/ja/items/5153266)。也允许使用随 Menno 附带的 `Body_Base` 基础模型。

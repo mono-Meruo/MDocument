@@ -1,72 +1,65 @@
 ---
 title: 结构
-parent: Menno
 nav_order: 3
-permalink: /menno/structure/
-lang: zh
 ---
 
-# Menno - 结构
+# 结构说明
 
-本页说明Menno虚拟形象的文件夹结构和文件组织。
+查看 Menno 的文件存放位置与预制体内容。
 
 ## 文件夹结构
-
-Menno虚拟形象文件按以下文件夹结构组织：
 
 ```
 Assets/emudotto/Menno/
 ├── Animation/            # 动画文件
-│   ├── ModularAvatar/    # ModularAvatar对象
-│   │   └── Costume/      # M. Avatar Setting中使用的服装切换开关
+│   ├── ModularAvatar/    # 用于 Modular Avatar 的对象
+│   │   └── Costume/      # 用于 M. Avatar Setting 的服装切换 Toggle
 │   └── Controllers/      # 动画控制器
-├── FBX/                  # 3D模型文件
+├── FBX/                  # 3D 模型文件
 ├── Materials/            # 材质文件
 │   ├── Presets/          # 发色等预设
 │   └── Tex_Main/         # 纹理文件
 ├── Materials_Props/      # 道具材质文件
-│   └── Tex_Props/        # 道具纹理文件
+│   └── Tex_Props/        # 纹理文件
 ├── Prefab/               # 预制体文件
-│   └── ToggleProps.prefab # 道具预制体
-├── Menno.prefab          # Menno虚拟形象的主要预制体
+│   └── ToggleProps.prefab # 道具用预制体
+├── Menno.prefab          # Menno 主体预制体
 └── MennoScene.unity      # 场景
 ```
 
-## 主要文件说明
+## Menno.prefab
 
-### Menno.prefab
+此为角色主体的预制体。将其拖入场景中即可使用。
 
-这是Menno虚拟形象的主要预制体文件。您可以通过将此文件拖放到场景中来使用此虚拟形象。它包含以下主要组件：
+| 组件 | 作用 |
+|---|---|
+| VRC Avatar Descriptor | VRChat 角色设置 |
+| M Avatar Setup Helper | 与 M. Avatar Setting 的协同配置 |
+| Animator | 动画控制 |
+| Modular Avatar 组件 | 角色自定义 |
 
-- VRC Avatar Descriptor - VRChat虚拟形象设置
-- M Avatar Setup Helper - 与M. Avatar Setting集成
-- Animator - 动画控制
-- Modular Avatar组件组 - 虚拟形象自定义
-
-### 虚拟形象层级结构
-
-Menno预制体的层级结构如下：
+## 预制体层级
 
 ```
 Menno (根对象)
-├── Armature          # 虚拟形象骨骼
+├── Armature          # 角色骨骼
 ├── Body              # 身体网格
 ├── Hair              # 头发网格
 ├── Hair_Bangs        # 刘海网格
 ├── Belt              # 腰带网格
 ├── Boots             # 靴子网格
-├── Coat              # 外套网格
+├── Coat              # 大衣网格
 ├── Jacket            # 夹克网格
-├── Karada            # 身体细节网格
+├── Karada            # 躯体细节网格
 ├── Pants             # 裤子网格
 ├── Shirt             # 衬衫网格
 ├── Tie               # 领带网格
 ├── AutoAnchorObject  # 锚点
-├── MTear             # 眼泪效果
+├── MTear             # 眼泪特效
 ├── Costume           # 服装切换对象
-└── ToggleProps       # 切换道具对象
+└── ToggleProps       # 道具切换对象
 ```
 
-## 自定义注意事项
-
-- 更改材质或纹理时，建议创建原始文件的备份 
+::: tip
+修改材质或纹理前，建议备份原文件。修改方法请参考[修改方法](/zh/menno/customization/)。
+:::

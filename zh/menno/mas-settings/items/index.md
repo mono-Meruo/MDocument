@@ -1,51 +1,49 @@
 ---
-title: ⚙️物品设置
-parent: ⚙️M. Avatar Setting
-grand_parent: Menno
+title: 物品设置
 nav_order: 3
-permalink: /menno/mas-settings/items/
-lang: zh
 ---
 
-# Menno - 物品设置
+# 物品设置
 
-M. Avatar Setting允许您调整Menno虚拟形象的物品（如眼镜、帽子等）的显示和位置。
+可用于配置服装及 VRChat 中可切换显隐的 Toggle 物品的启用状态、初始显示与颜色。
 
-![物品设置UI]({{ site.baseurl }}/assets/images/item_settings.png)
+![物品设置UI](/assets/images/item_settings.png)
 
-## 物品显示设置
+## 使用方法
 
-您可以控制Menno虚拟形象上各种物品的显示/隐藏。
+1. 打开 M. Avatar Setting 窗口
+2. 选择 Menno 虚拟形象
+3. 展开“服装设置”区域
+4. 勾选所需服装旁边的复选框
 
-### 可用物品
+## 服装
 
-* **眼镜** - 控制眼镜的显示/隐藏
-* **帽子** - 控制帽子的显示/隐藏
-* **耳机** - 控制耳机的显示/隐藏
-* **口罩** - 控制口罩的显示/隐藏
+| 字段 | 说明 |
+|---|---|
+| 复选框 | 是否启用该服装 |
+| 初始状态 | 开启后，在虚拟形象加载时即显示。可同时启用多套服装 |
+| 颜色按钮 | 默认色 / 白色。将统一更改所有服装的颜色 |
 
-点击每个物品的切换按钮可以切换其显示状态。
+## Toggle 物品
 
-## 物品位置调整
+支持的对象为 Pan（平底锅）、Xondle、Mokia（手机）这三款物品。
 
-您可以使用混合形状调整物品的位置和角度。
+| 字段 | 说明 |
+|---|---|
+| 启用/禁用 | 是否使用该物品 |
+| 音效 | 切换时是否播放音效 |
+| 初始状态 | 是否在加载虚拟形象时显示该物品 |
 
-### 操作方法
+物品名称与说明会根据窗口右上角的语言切换按钮（日/英）自动同步切换。
 
-1. 打开M. Avatar Setting窗口
-2. 选择Menno虚拟形象
-3. 展开"物品设置"部分
-4. 展开每个物品类别并调整滑块
+## 重置
 
-## 重置设置
+点击“重置”按钮并在确认对话框中选择“是”，可将服装与 Toggle 物品的设置全部恢复为初始状态。
 
-如果要将所有物品设置重置为初始状态，请点击"重置"按钮。将显示确认对话框，如果选择"是"，设置将被重置。
+## 源文件路径
 
-## 注意事项
-
-* 某些物品组合可能会导致冲突
-* 极端的位置调整可能会影响物品的外观
-
-## 语言设置
-
-您可以使用M. Avatar Setting右上角的语言切换按钮在日语和英语之间切换。UI显示将相应切换。 
+| 对象 | 路径 |
+|---|---|
+| 服装预制体 | `Assets/emudotto/Menno/Animation/ModularAvatar/Costume` |
+| Toggle 物品预制体 | `Assets/emudotto/Menno/Prefab/ToggleProps.prefab` |
+| 服装材质 | `Assets/emudotto/Menno/Materials/Menno_Wear.mat` |

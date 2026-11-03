@@ -1,16 +1,14 @@
 ---
 title: Terms of Service
-parent: M. Avatar License
 nav_order: 1
-permalink: /licenses/terms-of-service/
-lang: en
 ---
 
 # M.avatar license Terms of Service
 
 M. (hereinafter referred to as "the Licensor") grants the user a license (hereinafter referred to as "this License") to use the data defined in these M.avatar license Terms of Service (hereinafter referred to as "these Terms") in accordance with these Terms. Users must review the contents of these Terms before starting to use the data. By starting to use the data in any way, including purchasing, downloading, or installing, the user is deemed to have agreed to these Terms. If the user is a minor or other person with limited legal capacity, they must obtain the consent of a legal representative, such as a guardian, before agreeing to these Terms.
 
-## General Provisions
+**General Provisions**
+
 - Article 1 (Definitions)
 - Article 2 (Grant of License)
 - Article 3 (Disclaimer)
@@ -20,7 +18,8 @@ M. (hereinafter referred to as "the Licensor") grants the user a license (herein
 - Article 7 (Exclusion of Anti-Social Forces)
 - Article 8 (Governing Law, etc.)
 
-## Specific Conditions
+**Specific Conditions**
+
 1.  Licensed Data
 2.  Conditions of Use
 3.  Special Notes

@@ -1,135 +1,122 @@
 ---
 title: 动画结构
-parent: Menno
 nav_order: 4
-permalink: /menno/animation/
-lang: zh
 ---
 
-# Menno - 动画结构
+# 动画结构
 
-## 动画文件夹结构
+可查看 Menno 的动画文件、控制器和参数名称及位置。修改表情或物品时请参考此文档。
 
-Menno的动画相关文件整理在以下文件夹中：
+## 文件夹结构
 
-```
-Assets/emudotto/Menno/Animation/
-├── AnimaitonLayer/ - 动画控制器
-├── FX_Body/ - 身体动画
-├── FX_Face/ - 表情动画
-├── FX_ToggleProp/ - 切换道具动画
-├── Gesture/ - 手势动画
-├── Locomotion/ - 移动动画
-├── ModularAvatar/ - ModularAvatar扩展
-└── Parameters/ - VRChatSDK菜单及参数设置
-```
+所有文件均位于 `Assets/emudotto/Menno/Animation/` 目录中。
+
+| 文件夹 | 说明 |
+|---|---|
+| `AnimaitonLayer/` | 动画控制器 |
+| `FX_Body/` | 身体动画 |
+| `FX_Face/` | 面部动画 |
+| `FX_ToggleProp/` | 开关物品动画 |
+| `Gesture/` | 手势动画 |
+| `Locomotion/` | 移动动画 |
+| `ModularAvatar/` | Modular Avatar 扩展 |
+| `Parameters/` | VRChat SDK 菜单与参数 |
 
 ## 动画控制器
 
-### Menno_Layer_FX.controller
+| 控制器 | 功能 |
+|---|---|
+| `AnimaitonLayer/Menno_Layer_FX.controller` | 主 FX 控制器。管理面部、身体灯光及开关物品 |
+| `AnimaitonLayer/Menno_Layer_Gesture.controller` | 手部手势 |
+| `Menno_Props.controller` / `Menno_Props_Gesture.controller` | 物品开关及关联手势。上传时 Modular Avatar 会将其整合至 FX 图层 |
 
-Menno虚拟形象的主要动画控制器是`AnimaitonLayer/Menno_Layer_FX.controller`。该控制器管理表情、身体发光、切换道具等。
-
-FX控制器的主要结构如下：
+`Menno_Layer_FX.controller` 的结构如下。
 
 ```
 Menno_Layer_FX.controller
-├── 表情状态机
-│   ├── 默认状态_Base
+├── 面部状态机
+│   ├── 初始状态_Base
 │   ├── 微笑_Smile
 │   ├── 悲伤_Sad
 │   └── 其他表情...
-├── 身体发光状态机
-│   ├── 发光_OFF
-│   └── 发光_ON
-└── 切换道具状态机
+├── 身体灯光状态机
+│   ├── 灯光_OFF
+│   └── 灯光_ON
+└── 开关物品状态机
     ├── Pan_OFF / Pan_ON
     ├── Xondle_OFF / Xondle_ON
     └── Mokia_OFF / Mokia_ON
 ```
 
-### Menno_Layer_Gesture.controller
+## 面部动画（FX_Face）
 
-`AnimaitonLayer/Menno_Layer_Gesture.controller`控制手势动作。
+主要表情列表。此外还有多种表情，可从 Expression Menu 中选择。
 
-### Menno_Props.controller & Menno_Props_Gesture.controller
+| 动画名称 | 表情 |
+|---|---|
+| `Menno_初期状態_Base` | 初始状态 |
+| `Menno_笑顔_Smile` | 微笑 |
+| `Menno_悲しみ_Sad` | 悲伤 |
+| `Menno_怒り_Angry` | 愤怒 |
+| `Menno_驚愕_surprise` | 惊讶 |
+| `Menno_泣く_Cry` | 哭泣 |
+| `Menno_ハート_Heart` | 爱心眼 |
+| `Menno_舌出し_Tongue` | 吐舌头 |
+| `Menno_和み_Calm` | 放松 |
+| `Menno_目閉じ_Sleep` | 闭眼 |
+| `Menno_冷え_Cold` | 寒冷 |
+| `Menno_焦り_Impatience` | 焦躁 |
 
-这些控制器控制道具切换操作和相关手势。
-通过Modular Avatar上传后与FX层集成。
-
-## 表情动画 (FX_Face)
-
-基本Menno虚拟形象具有以下表情动画：
+## 身体动画（FX_Body）
 
 | 动画名称 | 说明 |
-|--------------|------|
-| Menno_默认状态_Base | 默认状态 |
-| Menno_微笑_Smile | 微笑表情 |
-| Menno_悲伤_Sad | 悲伤表情 |
-| Menno_愤怒_Angry | 愤怒表情 |
-| Menno_惊讶_surprise | 惊讶表情 |
-| Menno_哭泣_Cry | 哭泣表情 |
-| Menno_爱心_Heart | 眼睛变成爱心形状的表情 |
-| Menno_吐舌头_Tongue | 吐舌头的表情 |
-| Menno_平静_Calm | 放松的表情 |
-| Menno_闭眼_Sleep | 闭眼的表情 |
-| Menno_寒冷_Cold | 感到寒冷的表情 |
-| Menno_急躁_Impatience | 急躁的表情 |
+|---|---|
+| `Menno_Body_Lighting` | 身体灯光调节 |
+| `Menno_Body_Cheek` | PhysBone 脸颊牵引 |
+| `Menno_Body_Cheek_L` | PhysBone 左脸颊牵引 |
+| `Menno_Body_Cheek_R` | PhysBone 右脸颊牵引 |
 
-此外还准备了其他各种表情，可以在Expression Menu中选择。
+## 菜单与参数（Parameters）
 
-## 身体动画 (FX_Body)
+| 文件 | 说明 |
+|---|---|
+| `Menno_ExpressionParameters.asset` | 基础参数 |
+| `Menno_ExpressionsMenu.asset` | 主菜单 |
+| `Menno_FaceMenu.asset` | 表情菜单 |
+| `Menno_FaceMenu1.asset` / `Menno_FaceMenu2.asset` / `Menno_FaceMenu3.asset` | 附加表情菜单 |
+| `Menno_Props.asset` / `Menno_Props_SubMenu.asset` | 物品菜单 |
 
-身体动画包括以下内容：
-
-- **Menno_Body_Lighting** - 身体发光调整
-- **Menno_Body_Cheek** - 受PhysBone影响的脸颊拉伸
-- **Menno_Body_Cheek_L** - 受PhysBone影响的左侧脸颊拉伸
-- **Menno_Body_Cheek_R** - 受PhysBone影响的右侧脸颊拉伸
-
-## 参数设置 (Parameters)
-
-Menno虚拟形象使用以下Expression Menu和Parameters：
-
-- **Menno_ExpressionParameters.asset** - 基本参数设置
-- **Menno_ExpressionsMenu.asset** - 主菜单
-- **Menno_FaceMenu.asset** - 表情菜单
-- **Menno_FaceMenu1.asset**, **Menno_FaceMenu2.asset**, **Menno_FaceMenu3.asset** - 附加表情菜单
-- **Menno_Props.asset**, **Menno_Props_SubMenu.asset** - 道具菜单
-
-### 主要参数列表
+### 主要参数
 
 | 参数名称 | 类型 | 说明 |
-|--------------|------|------|
-| VRCFaceBlendH | Float | 水平方向表情混合(VRChat标准) |
-| VRCFaceBlendV | Float | 垂直方向表情混合(VRChat标准) |
-| GestureLeft | Int | 左手手势(VRChat标准) |
-| GestureRight | Int | 右手手势(VRChat标准) |
-| GestureLeftWeight | Float | 左手手势强度(VRChat标准) |
-| GestureRightWeight | Float | 右手手势强度(VRChat标准) |
-| FacialExpression | Int | 表情选择 |
-| BodyLighting | Float | 身体发光调整 |
-| Cheek | Bool | 脸颊拉伸ON/OFF |
-| CheekLeft | Bool | 左侧脸颊拉伸ON/OFF |
-| CheekRight | Bool | 右侧脸颊拉伸ON/OFF |
-| TogglePan | Bool | 平底锅显示/隐藏 |
-| ToggleXondle | Bool | Xondle/Xontra显示/隐藏 |
-| ToggleMokia | Bool | 手机显示/隐藏 |
+|---|---|---|
+| `VRCFaceBlendH` | Float | 面部水平混合（VRChat 标准） |
+| `VRCFaceBlendV` | Float | 面部垂直混合（VRChat 标准） |
+| `GestureLeft` | Int | 左手手势（VRChat 标准） |
+| `GestureRight` | Int | 右手手势（VRChat 标准） |
+| `GestureLeftWeight` | Float | 左手手势强度（VRChat 标准） |
+| `GestureRightWeight` | Float | 右手手势强度（VRChat 标准） |
+| `FacialExpression` | Int | 表情选择 |
+| `BodyLighting` | Float | 身体灯光调节 |
+| `Cheek` | Bool | 脸颊牵引开关 |
+| `CheekLeft` | Bool | 左脸颊牵引开关 |
+| `CheekRight` | Bool | 右脸颊牵引开关 |
+| `TogglePan` | Bool | 平底锅显示/隐藏 |
+| `ToggleXondle` | Bool | Xondle/Xontra 显示/隐藏 |
+| `ToggleMokia` | Bool | 手机显示/隐藏 |
 
-## 表情使用方法
+## 表情切换方法
 
-Menno虚拟形象的表情可以通过以下方式使用：
+1. 在 VRChat 中打开动作菜单（PC端按 `R` 键，VR端使用动作菜单按钮）。
+2. 在 Menno 的菜单中选择「表情」。
+3. 选择所需表情。
 
-### 1. 在动作菜单中选择
-
-打开VRChat的动作菜单（PC按R键，VR按动作菜单按钮），在Menno的表情菜单中选择表情。
-
-表情菜单按以下层次结构组织：
+菜单层级如下：
 
 ```
 主菜单
 ├── 表情
-│   ├── 基本表情
+│   ├── 基础表情
 │   │   ├── 微笑
 │   │   ├── 悲伤
 │   │   └── ...
@@ -137,12 +124,12 @@ Menno虚拟形象的表情可以通过以下方式使用：
 │   │   ├── 爱心眼
 │   │   ├── 燃烧眼
 │   │   └── ...
-│   └── 情感表达
-│       ├── 急躁
+│   └── 情感表现
+│       ├── 焦躁
 │       ├── 寒冷
 │       └── ...
-└── 道具
+└── 物品
     ├── 平底锅
     ├── Xondle
     └── Mokia
-``` 
+```

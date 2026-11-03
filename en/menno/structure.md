@@ -1,54 +1,47 @@
 ---
 title: Structure
-parent: Menno
 nav_order: 3
-permalink: /menno/structure/
-lang: en
 ---
 
-# Menno - Structure
+# Structure Explanation
 
-This page explains the folder structure and file organization of the Menno avatar.
+This section covers the Menno file structure and prefab contents.
 
 ## Folder Structure
-
-The Menno avatar files are organized in the following folder structure:
 
 ```
 Assets/emudotto/Menno/
 ├── Animation/            # Animation files
 │   ├── ModularAvatar/    # Objects for ModularAvatar
-│   │   └── Costume/      # Toggles for costume switching used in M. Avatar Setting
+│   │   └── Costume/      # Toggle for costume switching used by M. Avatar Setting
 │   └── Controllers/      # Animation controllers
 ├── FBX/                  # 3D model files
 ├── Materials/            # Material files
-│   ├── Presets/          # Presets for hair color etc.
+│   ├── Presets/          # Presets for hair color, etc.
 │   └── Tex_Main/         # Texture files
-├── Materials_Props/      # Material files for items
+├── Materials_Props/      # Item material files
 │   └── Tex_Props/        # Texture files
 ├── Prefab/               # Prefab files
-│   └── ToggleProps.prefab # Prefab for items
-├── Menno.prefab          # Main prefab for Menno avatar
-└── MennoScene.unity      # Scene
+│   └── ToggleProps.prefab # Item prefabs
+├── Menno.prefab          # Main prefab for the Menno avatar
+└── MennoScene.unity      # Scene file
 ```
 
-## Main Files Description
+## Menno.prefab
 
-### Menno.prefab
+This is the prefab for the avatar itself. Drag and drop it into a scene to use it.
 
-This is the main prefab file for the Menno avatar. You can use this avatar by dragging and dropping this file into a scene. It includes the following main components:
+| Component | Purpose |
+|---|---|
+| VRC Avatar Descriptor | VRChat avatar settings |
+| M Avatar Setup Helper | Integration with M. Avatar Setting |
+| Animator | Animation control |
+| Modular Avatar components | Avatar customization |
 
-- VRC Avatar Descriptor - Settings for VRChat avatar
-- M Avatar Setup Helper - Integration with M. Avatar Setting
-- Animator - Animation control
-- Modular Avatar component group - Avatar customization
-
-### Avatar Hierarchy Structure
-
-The hierarchy structure of the Menno prefab is as follows:
+## Prefab Hierarchy
 
 ```
-Menno (root object)
+Menno (Root Object)
 ├── Armature          # Avatar bones
 ├── Body              # Body mesh
 ├── Hair              # Hair mesh
@@ -67,6 +60,6 @@ Menno (root object)
 └── ToggleProps       # Object for toggle items
 ```
 
-## Notes for Customization
-
-- When changing materials or textures, it is recommended to create backups of the original files 
+::: tip
+It is recommended to back up the original files before modifying materials or textures. See [Customization Guide](/en/menno/customization/) for instructions on how to make changes.
+:::
