@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 改変方法
 parent: Menno
 nav_order: 2

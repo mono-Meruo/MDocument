@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: M. 아바타 라이선스
 nav_order: 3
 has_children: true

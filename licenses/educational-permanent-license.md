@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 非商用プロジェクトライセンス
 parent: M. アバターライセンス
 nav_order: 2

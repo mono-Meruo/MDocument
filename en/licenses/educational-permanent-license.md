@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: Non-Commercial Project License
 parent: M. Avatar License
 nav_order: 2

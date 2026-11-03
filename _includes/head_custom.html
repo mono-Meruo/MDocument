@@ -1,5 +1,3 @@
-<!-- Custom head content -->
-{% include lang-meta.html %}
-<style>
-  /* Additional custom styles can be added here */
-</style> 
+{%- for lang in site.languages %}
+<link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ site.baseurl }}{% unless lang == site.default_lang %}/{{ lang }}{% endunless %}{{ page.url }}">
+{%- endfor %}

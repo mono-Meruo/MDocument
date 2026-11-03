@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: Menno
 nav_order: 2
 has_children: true

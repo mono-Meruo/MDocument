@@ -1,19 +1,27 @@
 title: M. Document
 description: M. Avatar シリーズのドキュメント
 theme: just-the-docs
-url: https://mdocument.github.io
-baseurl: ""
+url: https://mono-meruo.github.io
+baseurl: /MDocument  # CI では actions/configure-pages の base_path で上書きされる
 color_scheme: dark
-aux_links: {}
 footer_content: Copyright &copy; 2025 M.
-github_editme_path: MDocument/MDocument.github.io/edit/main/
 
 # Polyglot 多言語設定
+# 翻訳ページは <lang>/<元と同じパス> に置き、front matter に lang と同じ permalink を書く
 languages: ["ja", "en", "ko", "zh"]
 default_lang: "ja"
-exclude_from_localization: ["assets", "images", "css", "_site", ".jekyll-cache"]
+exclude_from_localization: ["assets"]
 parallel_localization: false  # Windows環境では false に設定
 
-# プラグイン設定
 plugins:
   - jekyll-polyglot
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - LICENSE

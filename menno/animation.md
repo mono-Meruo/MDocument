@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: アニメーション構造
 parent: Menno
 nav_order: 4

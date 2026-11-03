@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 構造説明
 parent: Menno
 nav_order: 3

@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: ⬇️導入方法
 parent: Menno
 nav_order: 1
@@ -100,7 +99,7 @@ Mennoアバターを使用するには、以下が必要です：
 ### 6. アバターの設定
 
 1. シーン内のMennoオブジェクトを選択
-2. M. Avatar Settingを開く（[詳細はこちら](/avatar-setting/)）
+2. M. Avatar Settingを開く（[詳細はこちら]({{ site.baseurl }}/avatar-setting/)）
    - Unityのメニューから`Window > M Avatar Setting`を選択
    - または、Inspector上のMennoをクリックして、「M. Avatar Settingを開く」ボタンをクリック
 3. 必要に応じてアバターの設定を行う

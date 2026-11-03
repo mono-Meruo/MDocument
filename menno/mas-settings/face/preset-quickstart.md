@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 🎭顔ブレンドシェイププリセット（クイックスタート）
 parent: ⚙️顔の設定
 grand_parent: ⚙️M. Avatar Setting設定

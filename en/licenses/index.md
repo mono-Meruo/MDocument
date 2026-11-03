@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: M. Avatar License
 nav_order: 3
 has_children: true

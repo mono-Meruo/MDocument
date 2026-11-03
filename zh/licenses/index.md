@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: M. 化身模型许可协议
 nav_order: 3
 has_children: true

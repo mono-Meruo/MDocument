@@ -1,9 +1,8 @@
 ---
-layout: default
 title: 📅 更新履歴
 parent: ⚙️M. Avatar Setting
 nav_order: 6
-permalink: avatar-setting/history/
+permalink: /avatar-setting/history/
 ---
 
 # M. Avatar Setting 更新履歴

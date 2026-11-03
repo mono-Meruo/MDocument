@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: ⚙️M. Avatar Setting設定
 parent: Menno
 has_children: true
@@ -22,9 +21,9 @@ M. Avatar Settingは、Mennoアバターを簡単にカスタマイズするた�
 
 Mennoアバター用のM. Avatar Settingでは、以下の設定カテゴリが利用可能です：
 
-* [**顔の設定**](../menno/mas-settings/face/) - 表情やブレンドシェイプの調整
-* [**髪の毛の設定**](../menno/mas-settings/hair/) - 髪の色や形状の調整
-* [**アイテムの設定**](../menno/mas-settings/items/) - 衣装やアクセサリーの設定
+* [**顔の設定**]({{ site.baseurl }}/menno/mas-settings/face/) - 表情やブレンドシェイプの調整
+* [**髪の毛の設定**]({{ site.baseurl }}/menno/mas-settings/hair/) - 髪の色や形状の調整
+* [**アイテムの設定**]({{ site.baseurl }}/menno/mas-settings/items/) - 衣装やアクセサリーの設定
 
 各設定カテゴリの詳細については、それぞれのリンクをクリックして確認してください。
 

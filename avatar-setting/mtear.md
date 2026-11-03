@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: MTear涙エディター
 parent: ⚙️M. Avatar Setting
 nav_order: 3
@@ -41,7 +40,6 @@ MTearは以下のコンポーネントで構成されています：
 4. インスペクターに表示される「MTearEditor」コンポーネントを確認します
 5. 「涙メッシュを編集」ボタンをクリックします
 
-![MTearインスペクター](../assets/images/mtear_inspector.jpg)
 
 ### インスペクターから編集
 
@@ -52,7 +50,6 @@ MTearEditorには、涙メッシュを編集するためのボタンが表示さ
 
 MTearEditorWindowは、涙のメッシュ形状を編集するための専用ウィンドウです。
 
-![涙メッシュエディター](../assets/images/mtear_editor.jpg)
 
 ### 主な機能
 
@@ -74,7 +71,6 @@ MTearEditorWindowは、涙のメッシュ形状を編集するための専用ウ
 
 MTearは専用のシェーダー「Menno_Tear」を使用しています。このシェーダーには多数のパラメーターがあり、涙の見た目を調整できます。
 
-![涙シェーダー設定](../assets/images/mtear_shader.jpg)
 
 ### 基本設定
 

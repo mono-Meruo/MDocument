@@ -1,8 +1,7 @@
 ---
-layout: custom
 title: ❓よくある質問（FAQ）
 parent: Menno
-nav_order: 7
+nav_order: 8
 permalink: /menno/faq/
 lang: ja
 ---

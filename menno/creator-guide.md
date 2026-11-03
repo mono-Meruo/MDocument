@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 🎨クリエイターガイド
 parent: Menno
 nav_order: 7

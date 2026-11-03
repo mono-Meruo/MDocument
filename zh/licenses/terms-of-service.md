@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 服务条款
 parent: M. 化身模型许可协议
 nav_order: 1

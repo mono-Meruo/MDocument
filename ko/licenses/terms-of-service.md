@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 이용약관
 parent: M. 아바타 라이선스
 nav_order: 1

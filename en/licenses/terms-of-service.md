@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: Terms of Service
 parent: M. Avatar License
 nav_order: 1

@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 비상업적 프로젝트 라이선스
 parent: M. 아바타 라이선스
 nav_order: 2

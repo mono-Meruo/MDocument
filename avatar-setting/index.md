@@ -1,5 +1,4 @@
 ---
-layout: default
 title: ⚙️M. Avatar Setting
 nav_order: 3
 has_children: true
@@ -26,13 +25,13 @@ M. Avatar Settingには、以下の2つの方法で起動できます：
 
 Unityのメニューから`Window > M Avatar Setting`を選択することで、M. Avatar Settingウィンドウを開くことができます。
 
-![メニューから起動](../assets/images/mas_01.png)
+![メニューから起動]({{ site.baseurl }}/assets/images/mas_01.png)
 
 ### 2. M. Avatar Setup Helperから起動
 
 アバターを選択した状態で、Inspector上に表示される「M. Avatar Setup Helper」コンポーネント内の「M. Avatar Settingを開く」ボタンをクリックすることでも起動できます。この方法では、アバターが自動的に選択された状態でウィンドウが開きます。
 
-![Setup Helperから起動](../assets/images/mas_02.png)
+![Setup Helperから起動]({{ site.baseurl }}/assets/images/mas_02.png)
 
 ## 自動セットアップ機能
 
@@ -42,7 +41,7 @@ M. Avatar Settingには、アバターの設定を自動化するいくつかの
 
 「アニメーションキーを追加」ボタンを使用すると、Expression Menuにある「ライティング調整」Radial Puppetで使用されるアニメーションに、アバターの階層にあるマテリアルのすべての明るさの下限（_LightMinLimit）を自動的に登録できます。
 
-![アニメーションキー追加](../assets/images/mas_03.png)
+![アニメーションキー追加]({{ site.baseurl }}/assets/images/mas_03.png)
 
 #### 使用方法
 
@@ -59,8 +58,8 @@ M. Avatar Settingには、アバターの設定を自動化するいくつかの
 
 M. Avatar Settingでは、アバターの種類によって表示される設定が異なります。
 
-* [Mennoの設定](../menno/) - Mennoアバター固有の設定
+* [Mennoの設定]({{ site.baseurl }}/menno/) - Mennoアバター固有の設定
 
 ## その他の機能
 
-* [更新履歴](history/) - M. Avatar Settingとアバターのアップデート情報 
+* [更新履歴]({{ site.baseurl }}/avatar-setting/history/) - M. Avatar Settingとアバターのアップデート情報 

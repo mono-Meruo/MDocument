@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 利用規約
 parent: M. アバターライセンス
 nav_order: 1

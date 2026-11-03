@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: 非商业项目许可证
 parent: M. 化身模型许可协议
 nav_order: 2
