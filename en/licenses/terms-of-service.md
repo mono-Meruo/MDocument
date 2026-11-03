@@ -122,9 +122,8 @@ Permission for the above use includes use for oneself (including use as an avata
 
 **(4) Use for Meetings and Events**
 - **I. Use for events centered around this Avatar, etc.**
-  - Prior explicit permission from the Licensor (M.) is required.
+  - Permitted (no prior application to or permission from the Licensor is required).
   - Includes meeting use on VRSNS, online game platforms, and other platforms.
-  - Please contact the Licensor for permission applications.
 
 **(5) Processing**
 - **J. Adjusting, reducing polygons within a range that does not spoil the appearance, and converting file formats.**
