@@ -11,6 +11,6 @@
     "vitepress": "^1.6.4"
   },
   "dependencies": {
-    "motion": "^14.9.0"
+    "motion": "^14.10.1"
   }
 }
